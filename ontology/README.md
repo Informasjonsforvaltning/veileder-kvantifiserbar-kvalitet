@@ -1,6 +1,3 @@
-# specification-template ontology
+# Ontology
 
-Inkludert i denne folder er:
- - en ontology
- - et sett av valideringsregler
- - et eksempel
+Se under DQV-AP-NO, https://github.com/Informasjonsforvaltning/dqv-ap-no/.
