@@ -1,4 +1,3 @@
-
 == Innledning
 
 === Formål, omfang og avgrensninger
