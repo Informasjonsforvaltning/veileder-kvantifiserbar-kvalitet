@@ -1,4 +1,3 @@
-
 == Hensyn man bør ta når man beskriver kvantifiserbar kvalitet på datasett[[hensyn]]
 
 
@@ -9,15 +8,6 @@ Der det er relevant, finnes det predefinere kvalitetsmål for både enhet- og eg
 
 
 .Eksempeldatasett: Bygninger
-//// 
-[width="100%",options="header,footer"]
-|====================
-| Identifikator| Rex Eiendom |Byggeår | Kommune | Bruksareal | Bruttoareal
-|B00013 | Rex Eiendom | 1974 | Halden  | 510 m2 | 650 m2
-|B00014 | Oslo kommune | 2003 | Oslo | 2300 m2 | 3000 m2
-|B00015 | Eiendomsutvikling AS | 1995 | Bergen |  | 1200 m2
-|====================
-////
 image::images/eksempeldatasett.png[]
 
 === Predefinerte kvalitetsmål bruker negativt ladede ord
@@ -32,7 +22,6 @@ https://doc.difi.no/data/kvalitet-pa-datasett/[Spesifikasjon for beskrivelse av 
 For de aller fleste brukstilfeller antok arbeidsgruppen som utarbeidet disse definisjonene, at det burde holde med supplerende fritekst-kommentarer. For avanserte kvalitetsbeskrivelser, for eksempel der det er behov for å avgi resultater for hver enkelt egenskap, er det i henhold til DQV mulig å oppgi slike resultater som egne datasett (https://www.w3.org/TR/vocab-dqv/#dqv:QualityMeasurementDataset[dqv:QualityMeasurementDataset]). For eksempel en «tabell» som sier «2 % mangel» for egenskap «byggeår», «3 % mangel» for egenskap «bruksareal» og «0 % mangel» for alle de andre egenskapene:
 
 
-//// [width="100%",options="header,footer"]
 [cols="50%,10%,10%,10%,10%,10%", stripes=odd]
 |====================
 | Egenskap |Eier  |Byggeår  |Kommune  |Bruksareal  |Bruttoareal
