@@ -1,0 +1,420 @@
+
+== Definisjoner av kvantifiserbare kvalitetsmål [[definisjoner]]
+
+
+NOTE: Redaksjonell merknad 1: Definisjonene som denne veilederen er utarbeidet for å gi veiledning for, er samlet sammen i dette vedlegg. Disse definisjonene vil bli publisert uavhengig av veilederen, og også i maskinlesbart format senere. Den endelige versjonen av veilederen vil derfor ikke inneholde definisjonene, men peke til. 
+
+NOTE: Redaksjonell merknad 2: Gjennom arbeidet med å definere kvalitetsdimensjoner, kvalitetsdeldimensjoner og kvalitetsmål, har man funnet det mer hensiktsmessig å bruke fullstendighet som anbefalt term for kvalitetsdimensjon fullstendighet, enn kompletthet som var foreslått i https://doc.difi.no/data/kvalitet-pa-datasett/[Spesifikasjon for beskrivelse av kvalitet på datasett]. Spesifikasjonen vil bli oppdatert senere (tentativt etter at DCAT-AP-NO er ferdig revidert).
+
+NOTE: Redaksjonell merknad 3: Fra kommentarrunden på veilederen, fikk vi kommentar på at man ikke bør bruke termen kvalitetsdeldimensjon som arbeidsgruppen i 2017 valgte å bruke. Arbeidsgruppen i denne fasen av arbeidet klarte ikke å finne en bedre term som dekker behovet. Behovet er å ha et nivå mellom kvalitetsdimensjon og kvalitetsmål. Inntil en bedre term kommer på plass, brukes kvalitetsdeldimensjon. 
+
+=== Formål med definisjonene
+https://doc.difi.no/data/kvalitet-pa-datasett/[Spesifikasjon for beskrivelse av kvalitet på datasett] foreslo å etablere en felles oversikt over definisjoner av kvalitetsmål, som et kontrollert vokabular. Dette gjør det mulig å kunne referere til predefinerte kvalitetsmål, istedenfor at alle og enhver definerer disse hver gang, noe som også kan føre til at man definerer ulikt i tillegg til unødvendig dobbeltarbeid. Formålet med foreliggende definisjoner er derfor å skape et felles vokabular og måleverktøy for kvantifiserbar kvalitet på datasett. Dette vil skape en unison beskrivelse og forståelse av datakvalitet på tvers av virksomheter.
+
+I henhold til ovennevnte spesifikasjon, som er basert på https://www.w3.org/TR/vocab-dqv/[DQV fra W3C], skal et gitt kvalitetsmål referere til en kvalitetsdimensjon og kvalitetsdeldimensjon. Det er derfor hensiktsmessig også å predefinere kvalitetsdimensjoner og -deldimensjoner. Dette dokumentet inneholder derfor definisjoner på kvalitetsdimensjoner, tilhørende kvalitetsdeldimensjoner og deres kvalitetsmål. 
+
+Se https://doc.difi.no/data/kvalitet-pa-datasett/[Spesifikasjon for beskrivelse av kvalitet på datasett] for definisjon av begrepene kvalitetsdimensjon, kvalitetsdeldimensjon og kvalitetsmål. 
+
+=== Avgrensninger
+For å forstå anvendelsesområdet for de foreliggende definisjonene, er det viktig å være klar over følgende avgrensninger:
+
+* Det er kvantifiserbare kvalitetsmål som defineres.
+** Begrunnelse: Dette var utgangspunktet og mandatet til arbeidsgruppen som utarbeidet definisjoner for _kvantifiserbare_ kvalitetsmål.
+* Kvalitetsmål som er relevante kun i produksjonsfasen er ikke inkludert.
+** Begrunnelse: konteksten gjelder primært for datasett som skal kunne brukes av andre.
+** Eksempler på kvalitetsmål som ikke er inkludert: (manglende) punktlighet osv.
+* Kvalitetsmål som allerede er dekket av etablerte vokabularer defineres ikke på nytt.
+** Begrunnelse: Som et generelt prinsipp skal denne type definisjonsarbeid baseres på eksisterende, relevante standarder og spesifikasjoner der slike finnes.
+** Eksempler: «oppdateringsfrekvens» som finnes i https://doc.difi.no/dcat-ap-no/#datasett-frekvens[DCAT-AP-NO]/DCAT-AP; «romlig oppløsning» som finnes i https://semiceu.github.io/GeoDCAT-AP/drafts/latest/#spatial-resolution-spatial-resolution-of-the-dataset[geoDCAT-AP]. 
+* Sektor-/fagspesifikke kvalitetsmål er ikke inkludert.
+** Begrunnelse: Det er viktig å ha fokus på definisjoner av sektor-/faguavhengige kvalitetsmål. Det er første steg mot et felles vokabular og måleverktøy for datakvalitet. I tillegg vil arbeidsgruppen ikke ha hatt mulighet til å bli ferdig med sitt arbeid om alle fagområder skulle vært dekket.
+*** Det oppfordres til at sektor-/fagspesifikke kvalitetsmål predefineres (av sektor/fagansvarlige organer) og tilgjengeliggjøres på tilsvarende måte for gjenbruk innenfor samme sektor.
+* Det er _iboende_ datakvalitet (jf. "inherent data quality” i ISO 25012) som er definert. Det betyr at kvaliteten måles ut fra datasettet i seg selv og ikke eksterne faktorer. Dette gjør at andre kvalitetsaspekter, også nevnt i https://doc.difi.no/data/kvalitet-pa-datasett/[Spesifikasjon for beskrivelse av kvalitet på datasett], faller utenfor, som for eksempel _tilgjengelighet, forståelighet, relevans, nyttighet, tilstrekkelighet, samsvar_ osv.
+
+Selv om det er avgrensninger ved dette arbeidet, er det på ingen måte ment å utelukke andre måter å beskrive datakvalitet på. Man står fritt til å supplere med andre typer kvalitetsmål i kvalitetsbeskrivelsen.
+
+Der det er hensiktsmessig kan man også referere til andre definisjoner som ligger til grunn for kvalitetsmål som brukes (istedenfor å referere til predefinisjonene omtalt her). Referanse til definisjon bør oppgis.
+
+=== Definisjoner av noen sentrale begreper
+
+==== Imputering
+[cols="30s,70d"]
+|===
+|Anbefalt term |*imputering* (bokmål), *imputation* (engelsk)
+|Definisjon (bokmål) |det å sette inn verdi for en egenskap hvis den mangler eller er ubrukbar
+|Kilde til definisjon (bokmål) |basert på https://stats.oecd.org/glossary/detail.asp?ID=3462[«Glossary of Terms on Statistical Data Editing», OECD]
+|Definisjon (engelsk) |entering a value for a specific data item where the response is missing or unusable
+|Kilde til definisjon (engelsk) |based on https://stats.oecd.org/glossary/detail.asp?ID=3462["Glossary of Terms on Statistical Data Editing", OECD]
+|===
+
+==== Enhet
+[cols="30s,70d"]
+|===
+|Anbefalt term |*enhet* (bokmål), *object* (engelsk)
+|Tillatt term |objekt (bokmål), feature (engelsk)
+|Definisjon (bokmål) |avbildning av et fenomen i den virkelige verden
+|Kilde til definisjon (norsk) |basert på ISO 19157
+|Definisjon (engelsk) |abstraction of real world phenomena
+|Kilde til definisjon (engelsk) |ISO 19157
+|===
+
+==== Egenskap
+[cols="30s,70d"]
+|===
+|Anbefalt term |*egenskap* (bokmål), *property* (engelsk)
+|Tillatt term |variabel (bokmål), attributt (bokmål), kjennemerke (bokmål), variable (engelsk), attribute (engelsk), characteristic (engelsk)
+|Definisjon (bokmål) |navngitt kjennetegn eller karakteristikk av en enhet
+|Kilde til definisjon (bokmål) |https://www.kartverket.no/globalassets/standard/bransjestandarder-utover-sosi/geodatakvalitet.pdf[Geodatakvalitet]
+|Eksempler (bokmål) |inntekt, alder, vekt, yrke, bransje, sykdom
+|Definisjon (engelsk) |named characteristic of an object
+|Eksempler (engelsk) |income, age, weight, occupation, industry, disease
+|Kilde til definisjon (engelsk) |based on https://www.kartverket.no/globalassets/standard/bransjestandarder-utover-sosi/geodatakvalitet.pdf[Geodatakvalitet]
+|===
+
+==== Element 
+[cols="30s,70d"]
+|===
+|Anbefalt term |*element* (bokmål), *item* (engelsk)
+|Tillatt term |entity (engelsk) 
+|Definisjon (bokmål) |noe som kan beskrives og vurderes separat 
+|Kilde til definisjon (bokmål) |ISO 19157 
+|Merknad (bokmål) |et element er en del av et datasett og kan være enhet eller egenskap 
+|Definisjon (engelsk) |anything that can be described and considered separately
+|Merknad (engelsk) |an item can be any part of a dataset, such as an object or a property
+|Kilde definisjon (engelsk) |ISO 19157
+|===
+
+=== Kvalitetsdimensjon «fullstendighet»
+[cols="30s,70d"]
+|===
+|Anbefalt term |*fullstendighet* (bokmål), *completeness* (engelsk)
+|Tillatt term |kompletthet (bokmål)
+|Definisjon (bokmål) |graden av at datasettet inneholder forventede elementer for en spesifikk brukskontekst
+|Kilde til definisjon (bokmål) |basert på ISO 25012
+|Definisjon (engelsk) |the degree to which subject data associated with an entity has values for all expected attributes and related entity instances in a specific context of use
+|Kilde til definisjon (engelsk) |ISO 25012
+|===
+
+==== Kvalitetsdeldimensjon «underdekning»
+[cols="30s,70d"]
+|===
+|Anbefalt term |*underdekning* (bokmål), *under-coverage* (engelsk)
+|Tillatt term |omission (engelsk)
+|Definisjon (bokmål)|data som mangler i et datasett
+|Kilde til definisjon (bokmål) |ISO 19157
+|Definisjon (engelsk)|data absent from a data set
+|Kilde til definisjon (engelsk) |ISO 19157
+|===
+
+===== Kvalitetsmål «manglende enheter»
+[cols="30s,70d"]
+|===
+|Anbefalt term|*manglende enheter* (bokmål), *missing objects* (engelsk)
+|Definisjon (bokmål)|hvorvidt det mangler enheter i datasettet
+|Kilde til definisjon (bokmål)|basert på ISO 19157
+|Definisjon (engelsk)|whether objects are missing in the dataset
+|Kilde til definisjon (engelsk)|based on ISO 19157
+|Datatype|boolsk
+|Eksempel|Nei (datasettet inneholder alle bygninger)
+|===
+
+===== Kvalitetsmål «antall manglende enheter»
+[cols="30s,70d"]
+|===
+|Anbefalt term|*antall manglende enheter* (bokmål), *number of missing objects* (engelsk)
+|Definisjon (bokmål)|antall enheter som ikke er i datasettet men som forventes å være med
+|Kilde til definisjon (bokmål)|basert på ISO 19157
+|Definisjon (engelsk)|number of objects that are not present in the dataset but are expected to be
+|Kilde til definisjon (engelsk)|based on ISO 19157
+|Datatype|heltall 
+|Eksempel|2 (i virkeligheten finnes det 10 bygninger, men datasettet dekker kun 8)
+|===
+
+===== Kvalitetsmål «andel manglende enheter»
+[cols="30s,70d"]
+|===
+|Anbefalt term |*andel manglende enheter* (bokmål), *rate of missing objects* (engelsk)
+|Definisjon (bokmål) |antall enheter som mangler i forhold til antall enheter som skulle være med i datasettet 
+|Kilde til definisjon (bokmål) |basert på ISO 19157 
+|Definisjon (engelsk) |number of missing objects in relation to the number of objects that should be present in the dataset 
+|Kilde til definisjon (engelsk) |based on ISO 19157 
+|Datatype |prosent 
+|Eksempel |0.02% (datasettet dekker 0.02% færre bygninger en det som eksisterer i virkeligheten)
+|===
+
+===== Kvalitetsmål «antall enheter med manglende verdi for en gitt egenskap»
+[cols="30s,70d"]
+|===
+|Anbefalt term |*antall enheter med manglende verdi for en gitt egenskap* (bokmål), *number of objects with missing value for a given property* (engelsk) 
+|Definisjon (bokmål) |antall enheter i datasettet som mangler verdi for en gitt egenskap
+|Kilde til definisjon (bokmål) |egendefinert
+|Definisjon (engelsk) |number of objects in the data set with missing value for a given property
+|Kilde til definisjon (engelsk) |own defintion
+|Datatype |heltall
+|Eksempel |2 (to bygninger mangler verdi for «bruksareal»)
+|===
+
+===== Kvalitetsmål «andel enheter med manglende verdi for en gitt egenskap»
+[cols="30s,70d"]
+|===
+|Anbefalt term |*andel enheter med manglende verdi for en gitt egenskap* (bokmål), *rate of objects with missing value for av given property* (engelsk)
+|Definisjon (bokmål) |antall enheter med manglende verdi for en gitt egenskap i forhold til antall enheter i datasettet
+|Kilde til definisjon (bokmål) |egendefinert
+|Definisjon (engelsk)|number of objects with missing value for a given property in relation to the number of objects in the dataset 
+|Kilde til definisjon (engelsk) |own definition
+|Datatype |prosent
+|Eksempel |0.02% (0.02% av verdiene for egenskapen «bruksareal» mangler i datasettet)
+|===
+
+==== Kvalitetsdeldimensjon «overdekning» 
+[cols="30s,70d"]
+|===
+|Anbefalt term |*overdekning* (bokmål), *over-coverage* (engelsk) 
+|Tillatt term | commission (engelsk)
+|Definisjon (bokmål) |data som er med men som ikke skulle være med i et datasett 
+|Kilde til definisjon (bokmål) |ISO 19157 
+|Definisjon (engelsk) |excess data present in a data set 
+|Kilde til definisjon (engelsk) |ISO 19157
+|===
+
+===== Kvalitetsmål «overflødige enheter»
+[cols="30s,70d"]
+|===
+|Anbefalt term |*overflødige enheter* (bokmål), *excess objects* (engelsk) 
+|Tillatt term |overflødige objekter (bokmål) 
+|Definisjon (bokmål) |hvorvidt det finnes overflødige enheter i datasettet 
+|Kilde til definisjon (bokmål) |basert på ISO 19157 
+|Definisjon (engelsk) |whether there are objects incorrectly present in the dataset 
+|Kilde til definisjon (engelsk) |based on ISO 19157 
+|Datatype |boolsk 
+|Eksempel |Ja (noen bygninger er overflødige) |
+|===
+
+===== Kvalitetsmål «antall overflødige enheter»
+[cols="30s,70d"]
+|===
+|Anbefalt term |*antall overflødige enheter* (bokmål), *number of excess objects* (engelsk) 
+|Tillatt term |antall overflødige objekter (bokmål) 
+|Definisjon (bokmål) |antall enheter som er i datasettet, men som ikke forventes å være med 
+|Kilde til definisjon (bokmål) |basert på ISO 19175 
+|Definisjon (engelsk) |number of objects within the data set or sample that should not have been present 
+|Kilde til definisjon (engelsk) |based on ISO 19175 
+|Datatype |heltall 
+|Eksempel |3 (i virkeligheten finnes det 15 bygninger, men datasettet dekker 18)
+|===
+
+===== Kvalitetsmål «andel overflødige enheter»
+[cols="30s,70d"]
+|===
+|Anbefalt term |*andel overflødige enheter* (bokmål), *rate of excess objects* (engelsk) 
+|Tillatt term |andel overflødige objekter (bokmål) 
+|Definisjon (bokmål) |antall overflødige enheter i forhold til antall enheter som skulle være med i datasettet 
+|Kilde til definisjon (bokmål) |basert på ISO 19157 
+|Definisjon (engelsk) |number of excess objects in the data set in relation to the number of objects that should have been present 
+|Kilde til definisjon (engelsk) |based on ISO 19157 
+|Datatype |prosent 
+|Eksempel |0,03% (0,03% av bygningene i datasettet burde ikke være representert)
+|===
+
+==== Kvalitetsdeldimensjon «imputering»
+[cols="30s,70d"]
+|===
+|Anbefalt term |*imputering* (bokmål), *imputation* (engelsk) 
+|Definisjon (bokmål) |å sette inn verdi for en egenskap hvis den mangler eller er ubrukbar 
+|Kilde til definisjon (bokmål) |basert på https://stats.oecd.org/glossary/detail.asp?ID=3462[«Glossary of Terms on Statistical Data Editing», OECD] 
+|Definisjon (engelsk) |entering a value for a specific data item where the value is missing or unusable 
+|Kilde til definisjon (engelsk) |based on https://stats.oecd.org/glossary/detail.asp?ID=3462["Glossary of Terms on Statistical Data Editing", OECD]
+|===
+
+===== Kvalitetsmål «antall enheter med imputert verdi for en gitt egenskap»
+[cols="30s,70d"]
+|===
+|Anbefalt term |*antall enheter med imputert verdi for en gitt egenskap* (bokmål), *number of objects with imputed value for a given property* (engelsk) 
+|Tillatt term |antall objekter med imputert verdi for en gitt egenskap (bokmål) 
+|Definisjon (bokmål) |antall enheter i datasettet med imputert verdi for en gitt egenskap 
+|Kilde til definisjon (bokmål) |egendefinert 
+|Definisjon (engelsk) |number of objects in the data set with imputed value for a given property 
+|Kilde til definisjon (engelsk) |own definition 
+|Datatype |heltall 
+|Eksempel |4 (fire bygninger har fått antatt verdi for «byggeår»)
+|===
+
+===== Kvalitetsmål «andel enheter med imputert verdi for en gitt egenskap»
+[cols="30s,70d"]
+|===
+|Anbefalt term |*andel enheter med imputert verdi for en gitt egenskap* (bokmål), *rate of objects with imputed value for a given property* (engelsk)
+|Tillatt term |andel objekter med imputert verdi for en gitt egenskap (bokmål) 
+|Definisjon (bokmål) |antall enheter med imputert verdi for en gitt egenskap i forhold til antall enheter i datasettet 
+|Kilde til definisjon (bokmål) |egendefinert 
+|Definisjon (engelsk) |number of objects with imputed value for a given property in relation to the number of objects in the dataset 
+|Kilde til definisjon (engelsk) |own definition
+|Datatype |prosent 
+|Eksempel |0.04% (0.04% av bygningene har fått antatt verdi for «byggeår»)
+|===
+
+=== Kvalitetsdimensjon «aktualitet»
+[cols="30s,70d"]
+|===
+|Anbefalt term |*aktualitet* (bokmål), *currentness* (engelsk) 
+|Tillatt term |timeliness (engelsk) 
+|Definisjon (bokmål) |graden av «ferskhet» av datasettet, for en spesifikk brukskontekst 
+|Kilde til definisjon (bokmål) |basert på ISO 25012 
+|Definisjon (engelsk) |the degree to which data has attributes that are of the right age in a specific context of use 
+|Kilde til definisjon (engelsk) |ISO 25012
+|===
+
+==== Kvalitetsdeldimensjon «tidsdifferanse»
+[cols="30s,70d"]
+|===
+|Anbefalt term |*tidsdifferanse* (bokmål), *delay* (engelsk) 
+|Definisjon (bokmål) |ferskhet av data uttrykt som differansen mellom to tidspunkter 
+|Kilde til definisjon (bokmål) |egendefinert 
+|Definisjon (engelsk) |age of the dataset described as the difference between two points in time
+|Kilde til definisjon (engelsk) |own definition 
+|===
+
+===== Kvalitetsmål «samlet tidsdifferanse»
+[cols="30s,70d"]
+|===
+|Anbefalt term |*samlet tidsdifferanse* (bokmål), *overall time difference* (engelsk) 
+|Definisjon (bokmål) |tid mellom når datasettet kan tas i bruk og den hendelsen eller fenomenet datasettet beskriver inntreffer 
+|Kilde til definisjon (bokmål) |Eurostats begrepsdatabase RAMON, European Union, Regulation (EC) No 223/2009 
+|Definisjon (engelsk) |length of time between data availability and the event or phenomenon they describe 
+|Kilde til definisjon (engelsk) |Eurostat RAMON, European Union, Regulation (EC) No 223/2009 
+|Datatype |duration  
+|Merknad (bokmål) |Tillatte måleenheter for duration som er hentet fra xsd, er sekunder, minutter, dager, måneder eller år, dvs. ikke uker. 
+|Eksempel |‘’24 dager’’ (det tar i gjennomsnitt 24 dager fra en bygning står ferdig eller er revet til den er innlemmet i eller tatt ut fra datasettet)
+|===
+
+=== Kvalitetsdimensjon «konsistens»
+[cols="30s,70d"]
+|===
+|Anbefalt term |*konsistens* (bokmål), *consistency* (engelsk) 
+|Definisjon (bokmål) |graden av at dataene har egenskaper som ikke er motsigende og som samsvarer med andre egenskaper, for en spesifikk brukskontekst  
+|Kilde til definisjon (bokmål) |ISO 25012 
+|Merknad (bokmål) | Konsistens kan gjelde én eller flere sammenlignbare enheter i datasettet.
+|Definisjon (engelsk) |the degree to which data has attributes that are free from contradiction and are coherent with other data in a specific context of use 
+|Kilde til definisjon (engelsk) |ISO 25012
+|Merknad (engelsk) | It can be either or both among data regarding one entity and across similar data for comparable entities.
+|===
+
+==== Kvalitetsdeldimensjon «konsistens innad i datasett»
+[cols="30s,70d"]
+|===
+|Anbefalt term |*konsistens innad i datasett* (bokmål), *consistency within the dataset* (engelsk) 
+|Definisjon (bokmål) |graden av konsistens mellom egenskapene i datasettet  
+|Kilde til definisjon (bokmål) |egendefinert 
+|Definisjon (engelsk) |the degree to which there is consistency between the properties in the dataset 
+|Kilde til definisjon (engelsk) |own definition
+|===
+
+===== Kvalitetsmål «andel enheter med inkonsistente egenskaper»
+[cols="30s,70d"]
+|===
+|Anbefalt term |*andel enheter med inkonsistente egenskaper* (bokmål), *rate of objects with inconsistent properties* (engelsk) 
+|Tillatt term |andel objekter med inkonsistente egenskaper (bokmål) 
+|Definisjon (bokmål) |antall enheter med inkonsistente egenskaper i forhold til antall enheter i datasettet 
+|Kilde til definisjon (bokmål) |egendefinert 
+|Definisjon (engelsk) |number of objects with inconsistent properties in relation to the number of objects in the data set 
+|Kilde til definisjon (engelsk) |own definition 
+|Datatype |prosent 
+|Eksempel |0.03% (av bygningene har inkonsistens innbyrdes mellom noen av egenskapene)
+|===
+
+===== Kvalitetsmål «andel enheter med inkonsistens mellom gitte egenskaper»
+[cols="30s,70d"]
+|===
+|Anbefalt term |*andel enheter med inkonsistens mellom gitte egenskaper* (bokmål), *rate of objects with inconsistency between given properties* (engelsk) 
+|Tillatt term |andel objekter med inkonsistens mellom gitte egenskaper (bokmål) 
+|Definisjon (bokmål) |antall enheter med inkonsistens mellom gitte egenskaper i forhold til antall enheter i datasettet 
+|Kilde til definisjon (bokmål) |egendefinert 
+|Definisjon (engelsk) |number of objects with inconsistency between given properties in relation to the number of objects in the data set 
+|Kilde til definisjon (engelsk) |own definition 
+|Datatype |prosent 
+|Eksempel a|
+* 0,03% (av bygningene i datasettet står oppført med bruksareal som er høyere enn bruttoareal)
+* 0,4% (av ansatte i datasettet står oppført med startdato på arbeidsforhold som er før fødsesldato)
+* 0,2% (av personene i datasettet står oppført som utvandret, men er likevel registrert med norsk bostedsadresse)
+|===
+
+=== Kvalitetsdimensjon «nøyaktighet»
+[cols="30s,70d"]
+|===
+|Anbefalt term |*nøyaktighet* (bokmål), *accuracy* (engelsk) 
+|Definisjon (bokmål) |graden av at dataene korrekt representerer virkeligheten, for en spesifikk brukskontekst  
+|Kilde til definisjon (bokmål) |basert på ISO 25012 
+|Definisjon (engelsk) |the degree to which data has attributes that correctly represent the true value of the intended attribute of a concept or event in a specific context of use 
+|Kilde til definisjon (engelsk) |ISO 25012
+|===
+
+==== Kvalitetsdeldimensjon «identifikatorriktighet»
+[cols="30s,70d"]
+|===
+|Anbefalt term |*identifikatorriktighet* (bokmål), *identifier correctness* (engelsk)
+|Definisjon (bokmål) |graden av at enhetene i datasettet har riktige identifikatorer  
+|Kilde til definisjon (bokmål) |basert på BLUE-ETS 
+|Definisjon (engelsk) |the degree to which the objects in the dataset have the correct identifiers 
+|Kilde til definisjon (engelsk) |based on BLUE-ETS
+|===
+
+===== Kvalitetsmål «antall enheter med identifikatorfeil»
+[cols="30s,70d"]
+|===
+|Anbefalt term |*antall enheter med identifikatorfeil* (bokmål), *number of objects with incorrect identifiers* (engelsk) 
+|Tillatt term |antall objekter med identifikatorfeil (bokmål) 
+|Definisjon (bokmål) |antall enheter i datasettet med feil identifikatorer 
+|Kilde til definisjon (bokmål) |egendefinert 
+|Definisjon (engelsk) |number of objects in the data set with incorrect identifiers 
+|Kilde til definisjon (engelsk) |own definition 
+|Datatype |heltall 
+|Eksempel |207 (207 personer uten f-nummer/d-nummer men en utenlandsk id som ikke kvalitetssikres)
+|===
+
+===== Kvalitetsmål «andel enheter med identifikatorfeil»
+[cols="30s,70d"]
+|===
+|Anbefalt term |*andel enheter med identifikatorfeil* (bokmål), *rate of objects with incorrect identifiers* (engelsk) 
+|Tillatt term |andel objekter med identifikatorfeil (bokmål) 
+|Definisjon (bokmål) |antall enheter med feil identifikatorer i forhold til antall enheter i datasettet 
+|Kilde til definisjon (bokmål) |egendefinert 
+|Definisjon (engelsk) |number of objects with incorrect identifiers in relation to the number of objects in the data set 
+|Kilde til definisjon (engelsk) |own definition 
+|Datatype |prosent 
+|Eksempel |0,01% (0,01% av personene i datasettet har gått fra midlertidig tilknytning til permanent oppholdstillatelse og står oppført med d-nummer som identifikator istedenfor f-nummer)
+|===
+
+==== Kvalitetsdeldimensjon «klassifikasjonsriktighet»
+[cols="30s,70d"]
+|===
+|Anbefalt term |*klassifikasjonsriktighet* (bokmål), *classification correctness* (engelsk) 
+|Definisjon (bokmål) |riktigheten til klassifiseringen av enheter eller deres egenskaper sammenlignet med sanne verdier 
+|Kilde til definisjon (bokmål) |basert på https://www.kartverket.no/globalassets/standard/bransjestandarder-utover-sosi/geodatakvalitet.pdf[Geodatakvalitet] 
+|Definisjon (engelsk) |comparison of the classes assigned to features or their attributes to a universe of discourse (e.g. ground truth or reference data) 
+|Kilde til definisjon (engelsk) |ISO 19157
+|===
+
+===== Kvalitetsmål «antall feilklassifiserte enheter for en gitt egenskap»
+[cols="30s,70d"]
+|===
+|Anbefalt term |*antall feilklassifiserte enheter for en gitt egenskap* (bokmål), *number of incorrectly classified objects for a given property* (engelsk) 
+|Tillatt term |antall feilklassifiserte objekter for en gitt egenskap (bokmål) 
+|Definisjon (bokmål) |antall enheter i datasettet med feil klassifisering for en gitt egenskap 
+|Kilde til definisjon (bokmål) |basert på ISO 19157 
+|Definisjon (engelsk) |number of objects in the dataset that are incorrectly classified for a given property 
+|Kilde til definisjon (engelsk) |based on ISO 19157 
+|Datatype |heltall 
+|Eksempel |97 (97 enheter er oppført med feil næringskode i datasettet)
+|===
+
+===== Kvalitetsmål «andel feilklassifiserte enheter for en gitt egenskap»
+[cols="30s,70d"]
+|===
+|Anbefalt term |*andel feilklassifiserte enheter for en gitt egenskap* (bokmål), *rate of incorrectly classified objects for a given property* (engelsk) 
+|Tillatt term |andel feilklassifiserte objekter for en gitt egenskap (bokmål), misclassification rate (engelsk) 
+|Definisjon (bokmål) |antall feilklassifiserte enheter for en gitt egenskap i forhold til antall enheter i datasettet 
+|Kilde til definisjon (bokmål) |basert på ISO 19157 
+|Definisjon (engelsk) |number of objects that are incorrectly classified for a given property in relation to the number of objects in the dataset  
+|Kilde til definisjon (engelsk) |based on ISO 19157 
+|Datatype |prosent 
+|Eksempel |0,4% (0,4% av enhetene har feil kommunenummer)
+|===

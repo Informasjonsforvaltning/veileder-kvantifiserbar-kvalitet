@@ -1,25 +1,34 @@
-include::locale/attributes.adoc[]
-= Spesifikasjonsmal
-:description: Mal for bruk til nye spesifikasjoner som er laga i asciidoc.
+include::../shared/translation.adoc[]
+
+= Veileder for beskrivelse av kvalitet på datasett – kvantifiserbar kvalitet
+:description: Veileder for beskrivelse av kvalitet på datasett – kvantifiserbar kvalitet
 :doctype: book
 :docinfo:
 :icons: font
 :toc: left
-:toclevels: 3
+:toclevels: 5
 :sectanchors:
-:imagesdir: images
-:title-logo-image: image:digitaliseringsdirektoratet.png[pdfwidth=30vw]
+:title-logo-image:  image:images/digitaliseringsdirektoratet.png[pdfwidth=30vw]
 
-image::digitaliseringsdirektoratet.png[width=50%, pdfwidth=30vw]
+//:sectnums:
 
-Publisert: 2020-03-05
+//:sectnumlevels: 5
 
-WARNING: Dette er mal-dokument for andre spesifikasjoner.
+//{description}
 
-include::shared/download.adoc[]
+include::../shared/download.adoc[]
 
-// Innhold her. Feks ei fil pr kapittel:
-include::forord.adoc[]
-include::kapittel_1.adoc[]
+// :leveloffset: +1
 
-include::shared/stats.adoc[]
+// Innhold her.
+
+Publisert: 2020-02-20
+
+include::innledning.adoc[]
+include::hensyn.adoc[]
+include::oversikt.adoc[]
+include::dimensjoner.adoc[]
+include::vedlegg.adoc[]
+
+
+include::../shared/stats.adoc[]

@@ -1,0 +1,28 @@
+
+== Kvalitetsdimensjonen «fullstendighet»[[fullstendighet]]
+
+Fullstendighet handler både om mangel på elementer i datasettet (kvalitetsdeldimensjon «underdekning») og overflødige elementer i datasettet (kvalitetsdeldimensjon «overdekning»). Disse har kvalitetsmål på både enhets- og egenskapsnivå. Videre kan fullstendighet måles ut fra tre ulike verdityper, boolsk (ja/nei) på enhetsnivå, antall og andel på både enhets- og egenskapsnivå. Fritekst-feltet kan brukes til å opplyse om hvilken gitt egenskap som det mangler verdier for (for eksempel «bruksareal»).
+
+Fullstendighet handler også om imputering. Imputering er å fylle inn verdi for en gitt egenskap der verdien mangler eller er ubrukbar (se definisjon i <<#definisjoner>>). Dette gjøres for å håndtere manglende egenskaper (tomme celler) i et datasett der disse manglende verdiene skaper problemer for, blant annet, analysen av dataene. Imputerte verdier som kvalitetsmål gir datatilbyderen mulighet til å informere brukerne av datasettet at det er egenskaper i datasettet som ikke er hentet fra virkeligheten. Eksempel: antatt «byggeår» for eldre bygninger.
+
+
+== Kvalitetsdimensjonen «aktualitet»
+
+Det er predefinert ett kvalitetsmål i kvalitetsdimensjonen «aktualitet» – «samlet tidsdifferanse».
+
+For eksempeldatasettet «Bygninger» vet man at det statistisk sett tar ca. 25 dager fra en bygning kontraktsmessig skifter eier til eierskiftet blir meldt inn. Medregnet intern saksbehandlingstid setter datatilbydren «30 dager» som «samlet tidsdifferanse».
+
+
+== Kvalitetsdimensjonen «konsistens»
+
+Kvalitetsdimensjonen konsistens gjelder konsistens innad i ett og samme datasett, og ikke konsistens mellom datasett. Om datasettet er i samsvar med gitte standarder og krav er ikke definert på nytt som et eget kvalitetsmål ettersom dette er dekket av DCAT-AP-NO https://doc.difi.no/dcat-ap-no/#datasett-i-samsvar-med[(Datasett: i samsvar med)]. Et eksempel på slik innbyrdes inkonsistens er når bruksareal er større enn bruttoareal for en bygning. 
+
+Kvalitetsdimensjonen konsistens kan i mange tilfeller lett forveksles med kvalitetsdimensjonen nøyaktighet. Det som bl.a. skiller nøyaktighet og konsistens er at når det gjelder konsistens _vet man ut fra vurdering av flere egenskaper at det er feil, men ikke hvilken eller hvilke egenskaper som er feil_ i datasettet. I eksemplet over er det ikke mulig å avgjøre om det er bruksareal eller bruttoareal (eller begge) som er feil. Når det gjelder nøyaktighet, _vet man hvilken egenskap som er feil_ (for eksempel feil identifikator). 
+
+Det første kvalitetsmålet i konsistens («Andel enheter med inkonsistente verdier for gitte egenskaper») måles på enhetsnivå. Her måles andel enheter som har en form for inkonsistens knyttet til seg. Det andre kvalitetsmålet («Andel enheter med inkonsistens mellom verdier for gitte egenskaper») går mer i dybden og brukes der man har innsikt i hva inkonsistensen gjelder på egenskapsnivå. Kvalitetsmålene oppgis i prosentandel; fritekstfeltet kan brukes til å forklare for hvilke egenskaper inkonsistensen gjelder. 
+
+== Kvalitetsdimensjonen «nøyaktighet»
+
+I kvalitetsdimensjonen nøyaktighet måles i hvilken grad dataene korrekt representerer virkeligheten.
+
+Nøyaktighet av en dataverdi er ofte avhengig av type data, og kvalitetsmål for nøyaktighet blir fort svært fag- og sektorspesifikke. De mest generelle nøyaktighetsmålene er derfor plukket ut i denne sammenheng: identifikatorriktighet som går på identifikasjonsnøkler, og klassifikasjonsriktighet som går på bruk av klassifikasjoner og kodeverk.
