@@ -1,9 +1,8 @@
-
 == Oversikt over predefinerte kvalitetsdimensjoner, kvalitetsdeldimensjoner og kvalitetsmål[[oversikt]]
 
-Denne veilederen forklarer bruk av predefinerte kvalitetsdimensjoner, kvalitetsdeldimensjoner og kvalitetsmål. Der det er hensiktsmessig kan man referere til andre definisjoner som ligger til grunn for kvalitetsmål. 
+Denne veilederen forklarer bruk av predefinerte kvalitetsdimensjoner, kvalitetsdeldimensjoner og kvalitetsmål. Der det er hensiktsmessig kan man referere til andre definisjoner som ligger til grunn for kvalitetsmål.
 
-Tabellen gir en oversikt over de kvalitetsdimensjoner, kvalitetsdeldimensjoner og kvalitetsmål som så langt er predefinerte. 
+Tabellen gir en oversikt over de kvalitetsdimensjoner, kvalitetsdeldimensjoner og kvalitetsmål som så langt er predefinerte.
 
 .Oversikt over vokabularet for kvalitetsdimensjoner, kvalitetsdeldimensjoner og kvantifiserbare kvalitetsmål.
 [cols="25%,25%,50%"]
