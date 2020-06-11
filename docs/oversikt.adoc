@@ -1,0 +1,28 @@
+== Oversikt over predefinerte kvalitetsdimensjoner, kvalitetsdeldimensjoner og kvalitetsmål[[oversikt]]
+
+Denne veilederen forklarer bruk av predefinerte kvalitetsdimensjoner, kvalitetsdeldimensjoner og kvalitetsmål. Der det er hensiktsmessig kan man referere til andre definisjoner som ligger til grunn for kvalitetsmål.
+
+Tabellen gir en oversikt over de kvalitetsdimensjoner, kvalitetsdeldimensjoner og kvalitetsmål som så langt er predefinerte.
+
+.Oversikt over vokabularet for kvalitetsdimensjoner, kvalitetsdeldimensjoner og kvantifiserbare kvalitetsmål.
+[cols="25%,25%,50%"]
+|===
+|*Kvalitetsdimensjon*|*Kvalitetsdeldimensjon*|*Kvalitetsmål*
+.10+|Fullstendighet .5+|Underdekning|Manglende enheter
+|Antall manglende enheter
+|Andel manglende enheter
+|Antall enheter med manglende verdi for en gitt egenskap
+|Andel enheter med manglende verdi for en gitt egenskap
+.3+|Overdekning|Overflødige enheter
+|Antall overflødige enheter
+|Andel overflødige enheter
+.2+|Imputering| Antall enheter med imputert verdi for en gitt egenskap
+|Andel enheter med med imputert verdi for en gitt egenskap
+|Aktualitet|Tidsdifferanse|Samlet tidsdifferanse
+.2+|Konsistent .2+|Konsistens innad i datasettet|Andel enheter med inkonsistente egenskaper
+|Andel enheter med inkonsistens mellom gitte egenskaper
+.4+|Nøyaktighet .2+|Identifikatorriktighet|Antall enheter med identifikatorfeil
+|Andel enheter med identifikatorfeil
+.2+|Klassifikasjonsriktighet|Antall feilklassifiserte enheter for en gitt egenskap
+|Andel feilklassifiserte enheter for en gitt egenskap
+|===
