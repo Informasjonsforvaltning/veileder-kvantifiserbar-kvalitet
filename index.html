@@ -5,8 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
-<meta name="description" content="Mal for bruk til nye spesifikasjoner som er laga i asciidoc.">
-<title>Spesifikasjonsmal</title>
+<meta name="description" content="Veileder for beskrivelse av kvalitet på datasett – kvantifiserbar kvalitet">
+<title>Veileder for beskrivelse av kvalitet på datasett – kvantifiserbar kvalitet</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -440,12 +440,105 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="book toc2 toc-left">
 <div id="header">
-<h1>Spesifikasjonsmal</h1>
+<h1>Veileder for beskrivelse av kvalitet på datasett – kvantifiserbar kvalitet</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Innholdsfortegnelse</div>
 <ul class="sectlevel1">
-<li><a href="#_forord">Forord</a></li>
-<li><a href="#_kapittel_1">Kapittel 1</a></li>
+<li><a href="#_innledning">Innledning</a>
+<ul class="sectlevel2">
+<li><a href="#_formål_omfang_og_avgrensninger">Formål, omfang og avgrensninger</a></li>
+<li><a href="#_målgruppe">Målgruppe</a></li>
+<li><a href="#_sammenheng_mellom_relevante_standarder_spesifikasjoner_og_denne_veilederen">Sammenheng mellom relevante standarder, spesifikasjoner og denne veilederen</a></li>
+</ul>
+</li>
+<li><a href="#_hensyn_man_bør_ta_når_man_beskriver_kvantifiserbar_kvalitet_på_datasett">Hensyn man bør ta når man beskriver kvantifiserbar kvalitet på datasett</a>
+<ul class="sectlevel2">
+<li><a href="#_kvalitet_kan_måles_på_ulike_nivåer">Kvalitet kan måles på ulike nivåer</a></li>
+<li><a href="#_predefinerte_kvalitetsmål_bruker_negativt_ladede_ord">Predefinerte kvalitetsmål bruker negativt ladede ord</a></li>
+<li><a href="#_fritekst_kan_brukes_som_supplerende_forklaring">Fritekst kan brukes som supplerende forklaring</a></li>
+<li><a href="#_hvilke_kvalitetsmål_som_erfaringsmessig_er_viktige_for_brukerne_å_vite">Hvilke kvalitetsmål som erfaringsmessig er viktige for brukerne å vite</a></li>
+</ul>
+</li>
+<li><a href="#_oversikt_over_predefinerte_kvalitetsdimensjoner_kvalitetsdeldimensjoner_og_kvalitetsmål">Oversikt over predefinerte kvalitetsdimensjoner, kvalitetsdeldimensjoner og kvalitetsmål</a></li>
+<li><a href="#_kvalitetsdimensjonen_fullstendighet">Kvalitetsdimensjonen «fullstendighet»</a></li>
+<li><a href="#_kvalitetsdimensjonen_aktualitet">Kvalitetsdimensjonen «aktualitet»</a></li>
+<li><a href="#_kvalitetsdimensjonen_konsistens">Kvalitetsdimensjonen «konsistens»</a></li>
+<li><a href="#_kvalitetsdimensjonen_nøyaktighet">Kvalitetsdimensjonen «nøyaktighet»</a></li>
+<li><a href="#definisjoner">Definisjoner av kvantifiserbare kvalitetsmål</a>
+<ul class="sectlevel2">
+<li><a href="#_formål_med_definisjonene">Formål med definisjonene</a></li>
+<li><a href="#_avgrensninger">Avgrensninger</a></li>
+<li><a href="#_definisjoner_av_noen_sentrale_begreper">Definisjoner av noen sentrale begreper</a>
+<ul class="sectlevel3">
+<li><a href="#_imputering">Imputering</a></li>
+<li><a href="#_enhet">Enhet</a></li>
+<li><a href="#_egenskap">Egenskap</a></li>
+<li><a href="#_element">Element</a></li>
+</ul>
+</li>
+<li><a href="#_kvalitetsdimensjon_fullstendighet">Kvalitetsdimensjon «fullstendighet»</a>
+<ul class="sectlevel3">
+<li><a href="#_kvalitetsdeldimensjon_underdekning">Kvalitetsdeldimensjon «underdekning»</a>
+<ul class="sectlevel4">
+<li><a href="#_kvalitetsmål_manglende_enheter">Kvalitetsmål «manglende enheter»</a></li>
+<li><a href="#_kvalitetsmål_antall_manglende_enheter">Kvalitetsmål «antall manglende enheter»</a></li>
+<li><a href="#_kvalitetsmål_andel_manglende_enheter">Kvalitetsmål «andel manglende enheter»</a></li>
+<li><a href="#_kvalitetsmål_antall_enheter_med_manglende_verdi_for_en_gitt_egenskap">Kvalitetsmål «antall enheter med manglende verdi for en gitt egenskap»</a></li>
+<li><a href="#_kvalitetsmål_andel_enheter_med_manglende_verdi_for_en_gitt_egenskap">Kvalitetsmål «andel enheter med manglende verdi for en gitt egenskap»</a></li>
+</ul>
+</li>
+<li><a href="#_kvalitetsdeldimensjon_overdekning">Kvalitetsdeldimensjon «overdekning»</a>
+<ul class="sectlevel4">
+<li><a href="#_kvalitetsmål_overflødige_enheter">Kvalitetsmål «overflødige enheter»</a></li>
+<li><a href="#_kvalitetsmål_antall_overflødige_enheter">Kvalitetsmål «antall overflødige enheter»</a></li>
+<li><a href="#_kvalitetsmål_andel_overflødige_enheter">Kvalitetsmål «andel overflødige enheter»</a></li>
+</ul>
+</li>
+<li><a href="#_kvalitetsdeldimensjon_imputering">Kvalitetsdeldimensjon «imputering»</a>
+<ul class="sectlevel4">
+<li><a href="#_kvalitetsmål_antall_enheter_med_imputert_verdi_for_en_gitt_egenskap">Kvalitetsmål «antall enheter med imputert verdi for en gitt egenskap»</a></li>
+<li><a href="#_kvalitetsmål_andel_enheter_med_imputert_verdi_for_en_gitt_egenskap">Kvalitetsmål «andel enheter med imputert verdi for en gitt egenskap»</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_kvalitetsdimensjon_aktualitet">Kvalitetsdimensjon «aktualitet»</a>
+<ul class="sectlevel3">
+<li><a href="#_kvalitetsdeldimensjon_tidsdifferanse">Kvalitetsdeldimensjon «tidsdifferanse»</a>
+<ul class="sectlevel4">
+<li><a href="#_kvalitetsmål_samlet_tidsdifferanse">Kvalitetsmål «samlet tidsdifferanse»</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_kvalitetsdimensjon_konsistens">Kvalitetsdimensjon «konsistens»</a>
+<ul class="sectlevel3">
+<li><a href="#_kvalitetsdeldimensjon_konsistens_innad_i_datasett">Kvalitetsdeldimensjon «konsistens innad i datasett»</a>
+<ul class="sectlevel4">
+<li><a href="#_kvalitetsmål_andel_enheter_med_inkonsistente_egenskaper">Kvalitetsmål «andel enheter med inkonsistente egenskaper»</a></li>
+<li><a href="#_kvalitetsmål_andel_enheter_med_inkonsistens_mellom_gitte_egenskaper">Kvalitetsmål «andel enheter med inkonsistens mellom gitte egenskaper»</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_kvalitetsdimensjon_nøyaktighet">Kvalitetsdimensjon «nøyaktighet»</a>
+<ul class="sectlevel3">
+<li><a href="#_kvalitetsdeldimensjon_identifikatorriktighet">Kvalitetsdeldimensjon «identifikatorriktighet»</a>
+<ul class="sectlevel4">
+<li><a href="#_kvalitetsmål_antall_enheter_med_identifikatorfeil">Kvalitetsmål «antall enheter med identifikatorfeil»</a></li>
+<li><a href="#_kvalitetsmål_andel_enheter_med_identifikatorfeil">Kvalitetsmål «andel enheter med identifikatorfeil»</a></li>
+</ul>
+</li>
+<li><a href="#_kvalitetsdeldimensjon_klassifikasjonsriktighet">Kvalitetsdeldimensjon «klassifikasjonsriktighet»</a>
+<ul class="sectlevel4">
+<li><a href="#_kvalitetsmål_antall_feilklassifiserte_enheter_for_en_gitt_egenskap">Kvalitetsmål «antall feilklassifiserte enheter for en gitt egenskap»</a></li>
+<li><a href="#_kvalitetsmål_andel_feilklassifiserte_enheter_for_en_gitt_egenskap">Kvalitetsmål «andel feilklassifiserte enheter for en gitt egenskap»</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -458,19 +551,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="paragraph">
-<p>Publisert: 2020-03-05</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Advarsel"></i>
-</td>
-<td class="content">
-Dette er mal-dokument for andre spesifikasjoner.
-</td>
-</tr>
-</table>
+<p><strong>Publisert</strong>: 2020-02-20</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -488,25 +569,1713 @@ Dersom det oppleves problemer med nedlastet utgave, eksempelvis bilder som mangl
 </div>
 </div>
 <div class="sect1">
-<h2 id="_forord"><a class="anchor" href="#_forord"></a>Forord</h2>
+<h2 id="_innledning"><a class="anchor" href="#_innledning"></a>Innledning</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_formål_omfang_og_avgrensninger"><a class="anchor" href="#_formål_omfang_og_avgrensninger"></a>Formål, omfang og avgrensninger</h3>
 <div class="paragraph">
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non augue dapibus, mollis odio vel, efficitur orci. Aenean venenatis orci a porta cursus. Suspendisse at commodo nulla, et sagittis neque. Maecenas pulvinar tellus vel tellus ultricies, sit amet tristique ex faucibus. Fusce sapien tellus, accumsan nec justo in, lobortis varius purus. Curabitur non libero lectus. Praesent accumsan quam sit amet luctus lobortis. Pellentesque augue dui, congue et felis eget, scelerisque porta enim. Proin iaculis placerat tincidunt. Cras nec gravida elit.</p>
+<p>Formålet med dette dokumentet er å gi veiledning i felles definisjoner på og måleverktøy for kvantifiserbar kvalitet på datasett. Et felles sett med definisjoner og måleverktøy vil skape en unison beskrivelse og forståelse av datakvalitet på tvers av virksomheter. Hensikten er ikke å utelukke andre måter å beskrive datakvalitet på enn disse presentert i dette dokumentet. Man står fritt til å supplere med andre typer kvalitetsmål i kvalitetsbeskrivelsen.</p>
 </div>
 <div class="paragraph">
-<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla id leo ac est condimentum tempus. Duis maximus tortor nec porttitor tincidunt. Donec eu mi sed libero pharetra semper quis in ex. Nunc mattis vitae libero eu rhoncus. Nam mattis magna ac tincidunt feugiat. Nulla ullamcorper, sem non volutpat varius, felis quam rhoncus massa, vitae pellentesque odio ligula a metus. Vestibulum commodo lacus eu odio posuere pulvinar. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+<p>I henhold til <a href="https://doc.difi.no/data/kvalitet-pa-datasett/">Spesifikasjon for beskrivelse av kvalitet på datasett</a>. er det flere ulike måter å beskrive kvalitet på et datasett på:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>kvantifiserbar kvalitet</p>
+</li>
+<li>
+<p>ikke-kvantifiserbar kvalitet</p>
+</li>
+<li>
+<p>kvalitet i samsvar med gitt(e) standard(er)/spesifikasjon(er)</p>
+</li>
+<li>
+<p>brukertilbakemeldinger knyttet til kvalitet</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Spesifikasjonen foreslo også å predefinere kvalitetsdimensjoner, kvalitetsdeldimensjoner og kvalitetsmål. Se forøvrig predefinisjoner i <a href="#definisjoner">Definisjoner av kvantifiserbare kvalitetsmål</a>.</p>
+</div>
+<div class="paragraph">
+<p>Dette er ikke en veileder for datakvalitetsarbeidet generelt. Veilederen forklarer hvordan datakvalitet beskrives, med fokus på å bruke predefinerte kvantifiserbare kvalitetsmål. Ved behov vil det bli utarbeidet tilsvarende veiledere for de andre måter å beskrive kvalitet på. Disse vil inngå i <a href="https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/nasjonal-arkitektur/informasjonsforvaltning/rammeverk-informasjonsforvaltning">Rammeverk for informasjonsforvaltning</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_målgruppe"><a class="anchor" href="#_målgruppe"></a>Målgruppe</h3>
+<div class="paragraph">
+<p>Målgruppen for veilederen er:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>de som skal beskrive datasett og derunder kvantifiserbar kvalitet på datasett (primær målgruppe)</p>
+</li>
+<li>
+<p>de som leverer løsninger og verktøy for registrering og visning av denne type kvalitetsmål (primær målgruppe)</p>
+</li>
+<li>
+<p>de som skal forstå beskrivelse av kvantifiserbar kvalitet på datasett (sekundær målgruppe)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sammenheng_mellom_relevante_standarder_spesifikasjoner_og_denne_veilederen"><a class="anchor" href="#_sammenheng_mellom_relevante_standarder_spesifikasjoner_og_denne_veilederen"></a>Sammenheng mellom relevante standarder, spesifikasjoner og denne veilederen</h3>
+<div class="paragraph">
+<p>Veilederen må ses i sammenheng med  <a href="https://doc.difi.no/data/kvalitet-pa-datasett/">Spesifikasjon for beskrivelse av kvalitet på datasett</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/sammenheng.png" alt="sammenheng">
+</div>
+</div>
+<div class="paragraph">
+<p>Tegningen ovenfor illustrerer sammenhengen mellom ulike standarder og spesifikasjoner:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://doc.difi.no/dcat-ap-no/">DCAT-AP-NO</a>, standard for beskrivelse av datakataloger og datasett: Denne spesifiserer bl.a. hvordan datasett beskrives i en datakatalog, deriblant hvordan en beskrivelse av kvantifiserbar kvalitet knyttes til beskrivelsen av et datasett.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Merk"></i>
+</td>
+<td class="content">
+DCAT-AP-NO er i skrivende stund under revisjon, bl.a. for å kunne ta hensyn til beskrivelse av kvalitet.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://doc.difi.no/data/kvalitet-pa-datasett/">Spesifikasjon for beskrivelse av kvalitet på datasett</a> (basert på DQV): Denne spesifiserer hvordan kvalitet på datasett beskrives, bl.a. å knytte kvalitetsbeskrivelse til kvalitetsdimensjon.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Merk"></i>
+</td>
+<td class="content">
+Spesifikasjonen vil bli justert etter revisjon av DCAT-AP-NO.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Felles definisjoner: Hensikten med felles definisjoner er å skape et felles vokabular for kvalitetsbeskrivelse, slik at beskrivelsene forstås likt. Dette handler om felles definisjoner og forståelse av kvalitetsdimensjoner og kvalitetsdeldimensjoner, og også kvalitetsmål når det gjelder kvantifiserbar kvalitet.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Merk"></i>
+</td>
+<td class="content">
+Se ovennevnte spesifikasjonen for forklaring på kvalitetsdimensjon, kvalitetsdeldimensjon og kvalitetsmål.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Denne veilederen forklarer predefinerte kvalitetsmål for kvantifiserbar kvalitet, samt de kvalitetsdeldimensjoner og kvalitetsdimensjoner disse kvalitetsmålene tilhører.</p>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_kapittel_1"><a class="anchor" href="#_kapittel_1"></a>Kapittel 1</h2>
+<h2 id="_hensyn_man_bør_ta_når_man_beskriver_kvantifiserbar_kvalitet_på_datasett"><a class="anchor" href="#_hensyn_man_bør_ta_når_man_beskriver_kvantifiserbar_kvalitet_på_datasett"></a>Hensyn man bør ta når man beskriver kvantifiserbar kvalitet på datasett<a id="hensyn"></a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_kvalitet_kan_måles_på_ulike_nivåer"><a class="anchor" href="#_kvalitet_kan_måles_på_ulike_nivåer"></a>Kvalitet kan måles på ulike nivåer</h3>
+<div class="paragraph">
+<p>Datakvalitet kan måles på både enhetsnivå og egenskapsnivå. I eksempeldatasettet under vil hver bygning være en enhet (markert med rød ramme), mens opplysningene som er knyttet til hver bygning er en egenskap (eksemplifisert med blå ramme for egenskapen «bruksareal»; «eier», «byggeår», «kommune» og «bruttoareal» er også egenskaper). Se for øvrig definisjon på enhet og egenskap i <a href="#definisjoner">Definisjoner av kvantifiserbare kvalitetsmål</a>.</p>
+</div>
+<div class="paragraph">
+<p>Der det er relevant, finnes det predefinere kvalitetsmål for både enhet- og egenskapsnivå. Et eksempel er kvalitetsmålene «antall manglende enheter» og «antall enheter med manglende verdi for en gitt egenskap» under kvalitetsdimensjonen «fullstendighet» som går på henholdsvis enhetsnivå og egenskapsnivå. I eksempeldatasettet under mangler det verdi for egenskapen «bruksareal» for Bygning nr. B00015.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/eksempeldatasett.png" alt="eksempeldatasett">
+</div>
+<div class="title">Figur 1. Eksempeldatasett: Bygninger</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_predefinerte_kvalitetsmål_bruker_negativt_ladede_ord"><a class="anchor" href="#_predefinerte_kvalitetsmål_bruker_negativt_ladede_ord"></a>Predefinerte kvalitetsmål bruker negativt ladede ord</h3>
+<div class="paragraph">
+<p>I predefineringen av kvalitetsmål er det valgt å bruke såkalte negativt ladede ord for flere av kvalitetsmålene. Negativt ladede ord tydeliggjør feil og mangler i datakvaliteten.</p>
+</div>
+<div class="paragraph">
+<p>Et eksempel er kvalitetsmålet «andel manglende enheter» som handler om mangel. Det vil være for eksempel 2 % <em>mangel</em> (negativt ladet) istedenfor 98 % <em>fullstendig</em> (positivt ladet) som oppgis. Det er viktig å være klar over dette, både ved angivelse av verdier til kvalitetsmål og ved visning av verdiene i et sluttbrukergrensesnitt. I et konkret sluttbrukergrensesnitt kan man godt presentere det positivt (f.eks. regne om «2 % mangel» til «98 % fullstendig» og presentere resultatet positivt).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fritekst_kan_brukes_som_supplerende_forklaring"><a class="anchor" href="#_fritekst_kan_brukes_som_supplerende_forklaring"></a>Fritekst kan brukes som supplerende forklaring</h3>
+<div class="paragraph">
+<p><a href="https://doc.difi.no/data/kvalitet-pa-datasett/">Spesifikasjon for beskrivelse av kvalitet på datasett</a> tillater bruk av fritekst-kommentarer som supplerende forklaringer til et kvantifiserbart kvalitetsmål. For eksempel, til vårt eksempeldatasett «Bygninger», hvis resultatet på kvalitetsmålet «enheter med manglende verdi for en gitt egenskap» er «2 %», kan man i fritekst-kommentaren spesifisere hvilken egenskap mangelen gjelder, for eksempel: «Dette gjelder egenskap ‘byggeår’».</p>
+</div>
+<div class="paragraph">
+<p>For de aller fleste brukstilfeller antok arbeidsgruppen som utarbeidet disse definisjonene, at det burde holde med supplerende fritekst-kommentarer. For avanserte kvalitetsbeskrivelser, for eksempel der det er behov for å avgi resultater for hver enkelt egenskap, er det i henhold til DQV mulig å oppgi slike resultater som egne datasett (<a href="https://www.w3.org/TR/vocab-dqv/#dqv:QualityMeasurementDataset">dqv:QualityMeasurementDataset</a>). For eksempel en «tabell» som sier «2 % mangel» for egenskap «byggeår», «3 % mangel» for egenskap «bruksareal» og «0 % mangel» for alle de andre egenskapene:</p>
+</div>
+<table class="tableblock frame-all grid-all stripes-odd stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskap</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Eier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Byggeår</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kommune</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bruksareal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bruttoareal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Andel enheter med manglende verdi for en gitt egenskap</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0%</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_hvilke_kvalitetsmål_som_erfaringsmessig_er_viktige_for_brukerne_å_vite"><a class="anchor" href="#_hvilke_kvalitetsmål_som_erfaringsmessig_er_viktige_for_brukerne_å_vite"></a>Hvilke kvalitetsmål som erfaringsmessig er viktige for brukerne å vite</h3>
+<div class="paragraph">
+<p>Ikke alle de predefinerte kvalitetsmålene er relevant å måle i enhver sammenheng. Man står fritt til å velge ut de kvalitetsmålene som er aktuelle for datasettet. I noen tilfeller er det «nøyaktighet» som er viktigst for brukerne av datasettet, i andre tilfeller kan det være «konsistens», eller begge. I mange tilfeller må man også ta høyde for at det er flere ulike typer brukere. Man bør derfor velge de kvalitetsmålene som erfaringsmessig er viktige for mange brukere av det aktuelle datasettet.</p>
+</div>
+<div class="paragraph">
+<p>Samme prinsipp gjelder for kvalitetsmålets verditype. Flere av kvalitetsmålene kan måles på inntil tre forskjellige måter: boolsk (ja/nei), heltall (antall) og prosent (andel). Dette er for å legge til rette for nivået av innsikt i kvaliteten på datasettet. For eksempel kan det være at man vet at datasettet mangler noen enheter, men ikke hvor mange eller hvor stor andel, bl.a. fordi man i utgangspunktet ikke vet hvor mange og hvilke som skal være med. I slike tilfeller benytter man seg av den boolske verditypen («ja, noen enheter mangler»). I de tilfellene der man vet hvor mange enheter som mangler, benytter man seg av heltall («fire enheter mangler») og/eller prosent («5% av enhetene mangler») hvis man også vet hvor mange enheter som skulle vært med i datasettet.</p>
+</div>
+<div class="paragraph">
+<p>Når man beskriver et datasett som gjøres tilgjengelig for andre, beskriver man som regel kvalitet ut fra sin egen brukskontekst. Om kvaliteten som er beskrevet fra datatilbyderens ståsted er god (nok) eller ikke for brukerne av datasettet, er avhengig av brukskontekst og bruksformål. «2 % mangel» kan være bra for noen og ikke bra nok for andre.</p>
+</div>
+<div class="paragraph">
+<p>Når man beskriver kvalitet på datasett som er løpende oppdatert (f.eks. direkte oppslag i et register som løpende ajourholdes), vil det være umulig på forhånd å vite nøyaktig hvilken kvalitet datasettet kommer til å ha. Man vil derfor som regel basere seg på erfaringene man har med datasettet, f.eks. «Statistisk sett er det 2% etterregistrering» som fritekstkommentar til «2% mangel».</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_oversikt_over_predefinerte_kvalitetsdimensjoner_kvalitetsdeldimensjoner_og_kvalitetsmål"><a class="anchor" href="#_oversikt_over_predefinerte_kvalitetsdimensjoner_kvalitetsdeldimensjoner_og_kvalitetsmål"></a>Oversikt over predefinerte kvalitetsdimensjoner, kvalitetsdeldimensjoner og kvalitetsmål<a id="oversikt"></a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Etiam tempus neque porttitor enim congue, vel dictum odio aliquet. Sed massa lectus, pretium nec erat in, facilisis tincidunt lorem. Phasellus ut elit ut nibh aliquet sollicitudin a in elit. Duis dolor ligula, gravida ac eros sit amet, congue ultrices lacus. Curabitur ut tincidunt ipsum, ut aliquam ipsum. Phasellus vel elit eros. Duis pellentesque risus non sollicitudin bibendum. Donec ultrices mi lectus, id feugiat leo hendrerit a. Pellentesque in urna a elit cursus consectetur in et lacus. In hac habitasse platea dictumst. Cras scelerisque, nisl in dapibus malesuada, justo risus ornare sapien, a sagittis massa enim ut nisi. Ut varius augue justo, vel efficitur ipsum suscipit sed. Duis sollicitudin lobortis ligula sit amet sagittis.</p>
+<p>Denne veilederen forklarer bruk av predefinerte kvalitetsdimensjoner, kvalitetsdeldimensjoner og kvalitetsmål. Der det er hensiktsmessig kan man referere til andre definisjoner som ligger til grunn for kvalitetsmål.</p>
 </div>
 <div class="paragraph">
-<p>Vivamus elit massa, tempus vel bibendum non, fringilla sed ex. Mauris euismod neque et quam convallis gravida. Donec molestie nulla eget arcu molestie, et interdum neque auctor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec nec massa vel mauris pellentesque sollicitudin quis ut ante. Nulla malesuada pharetra ex, sit amet tincidunt mi dapibus ut. Aliquam erat volutpat. Sed sed quam sapien. Sed eu iaculis lacus, maximus interdum dolor.</p>
+<p>Tabellen gir en oversikt over de kvalitetsdimensjoner, kvalitetsdeldimensjoner og kvalitetsmål som så langt er predefinerte.</p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Tabell 1. Oversikt over vokabularet for kvalitetsdimensjoner, kvalitetsdeldimensjoner og kvantifiserbare kvalitetsmål.</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kvalitetsdimensjon</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kvalitetsdeldimensjon</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kvalitetsmål</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="10"><p class="tableblock">Fullstendighet</p></td>
+<td class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock">Underdekning</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Manglende enheter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Antall manglende enheter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Andel manglende enheter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Antall enheter med manglende verdi for en gitt egenskap</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Andel enheter med manglende verdi for en gitt egenskap</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">Overdekning</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Overflødige enheter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Antall overflødige enheter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Andel overflødige enheter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Imputering</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Antall enheter med imputert verdi for en gitt egenskap</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Andel enheter med med imputert verdi for en gitt egenskap</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Aktualitet</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tidsdifferanse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Samlet tidsdifferanse</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Konsistent</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Konsistens innad i datasettet</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Andel enheter med inkonsistente egenskaper</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Andel enheter med inkonsistens mellom gitte egenskaper</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">Nøyaktighet</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Identifikatorriktighet</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Antall enheter med identifikatorfeil</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Andel enheter med identifikatorfeil</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Klassifikasjonsriktighet</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Antall feilklassifiserte enheter for en gitt egenskap</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Andel feilklassifiserte enheter for en gitt egenskap</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kvalitetsdimensjonen_fullstendighet"><a class="anchor" href="#_kvalitetsdimensjonen_fullstendighet"></a>Kvalitetsdimensjonen «fullstendighet»<a id="fullstendighet"></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Fullstendighet handler både om mangel på elementer i datasettet (kvalitetsdeldimensjon «underdekning») og overflødige elementer i datasettet (kvalitetsdeldimensjon «overdekning»). Disse har kvalitetsmål på både enhets- og egenskapsnivå. Videre kan fullstendighet måles ut fra tre ulike verdityper, boolsk (ja/nei) på enhetsnivå, antall og andel på både enhets- og egenskapsnivå. Fritekst-feltet kan brukes til å opplyse om hvilken gitt egenskap som det mangler verdier for (for eksempel «bruksareal»).</p>
+</div>
+<div class="paragraph">
+<p>Fullstendighet handler også om imputering. Imputering er å fylle inn verdi for en gitt egenskap der verdien mangler eller er ubrukbar (se definisjon i <a href="#definisjoner">Definisjoner av kvantifiserbare kvalitetsmål</a>). Dette gjøres for å håndtere manglende egenskaper (tomme celler) i et datasett der disse manglende verdiene skaper problemer for, blant annet, analysen av dataene. Imputerte verdier som kvalitetsmål gir datatilbyderen mulighet til å informere brukerne av datasettet at det er egenskaper i datasettet som ikke er hentet fra virkeligheten. Eksempel: antatt «byggeår» for eldre bygninger.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kvalitetsdimensjonen_aktualitet"><a class="anchor" href="#_kvalitetsdimensjonen_aktualitet"></a>Kvalitetsdimensjonen «aktualitet»</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Det er predefinert ett kvalitetsmål i kvalitetsdimensjonen «aktualitet» – «samlet tidsdifferanse».</p>
+</div>
+<div class="paragraph">
+<p>For eksempeldatasettet «Bygninger» vet man at det statistisk sett tar ca. 25 dager fra en bygning kontraktsmessig skifter eier til eierskiftet blir meldt inn. Medregnet intern saksbehandlingstid setter datatilbydren «30 dager» som «samlet tidsdifferanse».</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kvalitetsdimensjonen_konsistens"><a class="anchor" href="#_kvalitetsdimensjonen_konsistens"></a>Kvalitetsdimensjonen «konsistens»</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Kvalitetsdimensjonen konsistens gjelder konsistens innad i ett og samme datasett, og ikke konsistens mellom datasett. Om datasettet er i samsvar med gitte standarder og krav er ikke definert på nytt som et eget kvalitetsmål ettersom dette er dekket av DCAT-AP-NO <a href="https://doc.difi.no/dcat-ap-no/#datasett-i-samsvar-med">(Datasett: i samsvar med)</a>. Et eksempel på slik innbyrdes inkonsistens er når bruksareal er større enn bruttoareal for en bygning.</p>
+</div>
+<div class="paragraph">
+<p>Kvalitetsdimensjonen konsistens kan i mange tilfeller lett forveksles med kvalitetsdimensjonen nøyaktighet. Det som bl.a. skiller nøyaktighet og konsistens er at når det gjelder konsistens <em>vet man ut fra vurdering av flere egenskaper at det er feil, men ikke hvilken eller hvilke egenskaper som er feil</em> i datasettet. I eksemplet over er det ikke mulig å avgjøre om det er bruksareal eller bruttoareal (eller begge) som er feil. Når det gjelder nøyaktighet, <em>vet man hvilken egenskap som er feil</em> (for eksempel feil identifikator).</p>
+</div>
+<div class="paragraph">
+<p>Det første kvalitetsmålet i konsistens («Andel enheter med inkonsistente verdier for gitte egenskaper») måles på enhetsnivå. Her måles andel enheter som har en form for inkonsistens knyttet til seg. Det andre kvalitetsmålet («Andel enheter med inkonsistens mellom verdier for gitte egenskaper») går mer i dybden og brukes der man har innsikt i hva inkonsistensen gjelder på egenskapsnivå. Kvalitetsmålene oppgis i prosentandel; fritekstfeltet kan brukes til å forklare for hvilke egenskaper inkonsistensen gjelder.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kvalitetsdimensjonen_nøyaktighet"><a class="anchor" href="#_kvalitetsdimensjonen_nøyaktighet"></a>Kvalitetsdimensjonen «nøyaktighet»</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>I kvalitetsdimensjonen nøyaktighet måles i hvilken grad dataene korrekt representerer virkeligheten.</p>
+</div>
+<div class="paragraph">
+<p>Nøyaktighet av en dataverdi er ofte avhengig av type data, og kvalitetsmål for nøyaktighet blir fort svært fag- og sektorspesifikke. De mest generelle nøyaktighetsmålene er derfor plukket ut i denne sammenheng: identifikatorriktighet som går på identifikasjonsnøkler, og klassifikasjonsriktighet som går på bruk av klassifikasjoner og kodeverk.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="definisjoner"><a class="anchor" href="#definisjoner"></a>Definisjoner av kvantifiserbare kvalitetsmål</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Merk"></i>
+</td>
+<td class="content">
+Redaksjonell merknad 1: Definisjonene som denne veilederen er utarbeidet for å gi veiledning for, er samlet sammen i dette vedlegg. Disse definisjonene vil bli publisert uavhengig av veilederen, og også i maskinlesbart format senere. Den endelige versjonen av veilederen vil derfor ikke inneholde definisjonene, men peke til.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Merk"></i>
+</td>
+<td class="content">
+Redaksjonell merknad 2: Gjennom arbeidet med å definere kvalitetsdimensjoner, kvalitetsdeldimensjoner og kvalitetsmål, har man funnet det mer hensiktsmessig å bruke fullstendighet som anbefalt term for kvalitetsdimensjon fullstendighet, enn kompletthet som var foreslått i <a href="https://doc.difi.no/data/kvalitet-pa-datasett/">Spesifikasjon for beskrivelse av kvalitet på datasett</a>. Spesifikasjonen vil bli oppdatert senere (tentativt etter at DCAT-AP-NO er ferdig revidert).
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Merk"></i>
+</td>
+<td class="content">
+Redaksjonell merknad 3: Fra kommentarrunden på veilederen, fikk vi kommentar på at man ikke bør bruke termen kvalitetsdeldimensjon som arbeidsgruppen i 2017 valgte å bruke. Arbeidsgruppen i denne fasen av arbeidet klarte ikke å finne en bedre term som dekker behovet. Behovet er å ha et nivå mellom kvalitetsdimensjon og kvalitetsmål. Inntil en bedre term kommer på plass, brukes kvalitetsdeldimensjon.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_formål_med_definisjonene"><a class="anchor" href="#_formål_med_definisjonene"></a>Formål med definisjonene</h3>
+<div class="paragraph">
+<p><a href="https://doc.difi.no/data/kvalitet-pa-datasett/">Spesifikasjon for beskrivelse av kvalitet på datasett</a> foreslo å etablere en felles oversikt over definisjoner av kvalitetsmål, som et kontrollert vokabular. Dette gjør det mulig å kunne referere til predefinerte kvalitetsmål, istedenfor at alle og enhver definerer disse hver gang, noe som også kan føre til at man definerer ulikt i tillegg til unødvendig dobbeltarbeid. Formålet med foreliggende definisjoner er derfor å skape et felles vokabular og måleverktøy for kvantifiserbar kvalitet på datasett. Dette vil skape en unison beskrivelse og forståelse av datakvalitet på tvers av virksomheter.</p>
+</div>
+<div class="paragraph">
+<p>I henhold til ovennevnte spesifikasjon, som er basert på <a href="https://www.w3.org/TR/vocab-dqv/">DQV fra W3C</a>, skal et gitt kvalitetsmål referere til en kvalitetsdimensjon og kvalitetsdeldimensjon. Det er derfor hensiktsmessig også å predefinere kvalitetsdimensjoner og -deldimensjoner. Dette dokumentet inneholder derfor definisjoner på kvalitetsdimensjoner, tilhørende kvalitetsdeldimensjoner og deres kvalitetsmål.</p>
+</div>
+<div class="paragraph">
+<p>Se <a href="https://doc.difi.no/data/kvalitet-pa-datasett/">Spesifikasjon for beskrivelse av kvalitet på datasett</a> for definisjon av begrepene kvalitetsdimensjon, kvalitetsdeldimensjon og kvalitetsmål.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_avgrensninger"><a class="anchor" href="#_avgrensninger"></a>Avgrensninger</h3>
+<div class="paragraph">
+<p>For å forstå anvendelsesområdet for de foreliggende definisjonene, er det viktig å være klar over følgende avgrensninger:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Det er kvantifiserbare kvalitetsmål som defineres.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Begrunnelse: Dette var utgangspunktet og mandatet til arbeidsgruppen som utarbeidet definisjoner for <em>kvantifiserbare</em> kvalitetsmål.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Kvalitetsmål som er relevante kun i produksjonsfasen er ikke inkludert.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Begrunnelse: konteksten gjelder primært for datasett som skal kunne brukes av andre.</p>
+</li>
+<li>
+<p>Eksempler på kvalitetsmål som ikke er inkludert: (manglende) punktlighet osv.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Kvalitetsmål som allerede er dekket av etablerte vokabularer defineres ikke på nytt.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Begrunnelse: Som et generelt prinsipp skal denne type definisjonsarbeid baseres på eksisterende, relevante standarder og spesifikasjoner der slike finnes.</p>
+</li>
+<li>
+<p>Eksempler: «oppdateringsfrekvens» som finnes i <a href="https://doc.difi.no/dcat-ap-no/#datasett-frekvens">DCAT-AP-NO</a>/DCAT-AP; «romlig oppløsning» som finnes i <a href="https://semiceu.github.io/GeoDCAT-AP/drafts/latest/#spatial-resolution-spatial-resolution-of-the-dataset">geoDCAT-AP</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Sektor-/fagspesifikke kvalitetsmål er ikke inkludert.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Begrunnelse: Det er viktig å ha fokus på definisjoner av sektor-/faguavhengige kvalitetsmål. Det er første steg mot et felles vokabular og måleverktøy for datakvalitet. I tillegg vil arbeidsgruppen ikke ha hatt mulighet til å bli ferdig med sitt arbeid om alle fagområder skulle vært dekket.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Det oppfordres til at sektor-/fagspesifikke kvalitetsmål predefineres (av sektor/fagansvarlige organer) og tilgjengeliggjøres på tilsvarende måte for gjenbruk innenfor samme sektor.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Det er <em>iboende</em> datakvalitet (jf. "inherent data quality” i ISO 25012) som er definert. Det betyr at kvaliteten måles ut fra datasettet i seg selv og ikke eksterne faktorer. Dette gjør at andre kvalitetsaspekter, også nevnt i <a href="https://doc.difi.no/data/kvalitet-pa-datasett/">Spesifikasjon for beskrivelse av kvalitet på datasett</a>, faller utenfor, som for eksempel <em>tilgjengelighet, forståelighet, relevans, nyttighet, tilstrekkelighet, samsvar</em> osv.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Selv om det er avgrensninger ved dette arbeidet, er det på ingen måte ment å utelukke andre måter å beskrive datakvalitet på. Man står fritt til å supplere med andre typer kvalitetsmål i kvalitetsbeskrivelsen.</p>
+</div>
+<div class="paragraph">
+<p>Der det er hensiktsmessig kan man også referere til andre definisjoner som ligger til grunn for kvalitetsmål som brukes (istedenfor å referere til predefinisjonene omtalt her). Referanse til definisjon bør oppgis.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_definisjoner_av_noen_sentrale_begreper"><a class="anchor" href="#_definisjoner_av_noen_sentrale_begreper"></a>Definisjoner av noen sentrale begreper</h3>
+<div class="sect3">
+<h4 id="_imputering"><a class="anchor" href="#_imputering"></a>Imputering</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>imputering</strong> (bokmål), <strong>imputation</strong> (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">det å sette inn verdi for en egenskap hvis den mangler eller er ubrukbar</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">basert på <a href="https://stats.oecd.org/glossary/detail.asp?ID=3462">«Glossary of Terms on Statistical Data Editing», OECD</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">entering a value for a specific data item where the response is missing or unusable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">based on <a href="https://stats.oecd.org/glossary/detail.asp?ID=3462">"Glossary of Terms on Statistical Data Editing", OECD</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_enhet"><a class="anchor" href="#_enhet"></a>Enhet</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>enhet</strong> (bokmål), <strong>object</strong> (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Tillatt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">objekt (bokmål), feature (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">avbildning av et fenomen i den virkelige verden</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (norsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">basert på ISO 19157</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">abstraction of real world phenomena</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ISO 19157</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_egenskap"><a class="anchor" href="#_egenskap"></a>Egenskap</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>egenskap</strong> (bokmål), <strong>property</strong> (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Tillatt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">variabel (bokmål), attributt (bokmål), kjennemerke (bokmål), variable (engelsk), attribute (engelsk), characteristic (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">navngitt kjennetegn eller karakteristikk av en enhet</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.kartverket.no/globalassets/standard/bransjestandarder-utover-sosi/geodatakvalitet.pdf">Geodatakvalitet</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempler (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">inntekt, alder, vekt, yrke, bransje, sykdom</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">named characteristic of an object</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempler (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">income, age, weight, occupation, industry, disease</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">based on <a href="https://www.kartverket.no/globalassets/standard/bransjestandarder-utover-sosi/geodatakvalitet.pdf">Geodatakvalitet</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_element"><a class="anchor" href="#_element"></a>Element</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>element</strong> (bokmål), <strong>item</strong> (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Tillatt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">entity (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">noe som kan beskrives og vurderes separat</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ISO 19157</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">et element er en del av et datasett og kan være enhet eller egenskap</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">anything that can be described and considered separately</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">an item can be any part of a dataset, such as an object or a property</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ISO 19157</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_kvalitetsdimensjon_fullstendighet"><a class="anchor" href="#_kvalitetsdimensjon_fullstendighet"></a>Kvalitetsdimensjon «fullstendighet»</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>fullstendighet</strong> (bokmål), <strong>completeness</strong> (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Tillatt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">kompletthet (bokmål)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">graden av at datasettet inneholder forventede elementer for en spesifikk brukskontekst</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">basert på ISO 25012</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">the degree to which subject data associated with an entity has values for all expected attributes and related entity instances in a specific context of use</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ISO 25012</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_kvalitetsdeldimensjon_underdekning"><a class="anchor" href="#_kvalitetsdeldimensjon_underdekning"></a>Kvalitetsdeldimensjon «underdekning»</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>underdekning</strong> (bokmål), <strong>under-coverage</strong> (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Tillatt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">omission (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">data som mangler i et datasett</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ISO 19157</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">data absent from a data set</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ISO 19157</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect4">
+<h5 id="_kvalitetsmål_manglende_enheter"><a class="anchor" href="#_kvalitetsmål_manglende_enheter"></a>Kvalitetsmål «manglende enheter»</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>manglende enheter</strong> (bokmål), <strong>missing objects</strong> (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">hvorvidt det mangler enheter i datasettet</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">basert på ISO 19157</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">whether objects are missing in the dataset</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">based on ISO 19157</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Datatype</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolsk</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nei (datasettet inneholder alle bygninger)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_kvalitetsmål_antall_manglende_enheter"><a class="anchor" href="#_kvalitetsmål_antall_manglende_enheter"></a>Kvalitetsmål «antall manglende enheter»</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>antall manglende enheter</strong> (bokmål), <strong>number of missing objects</strong> (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">antall enheter som ikke er i datasettet men som forventes å være med</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">basert på ISO 19157</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">number of objects that are not present in the dataset but are expected to be</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">based on ISO 19157</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Datatype</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">heltall</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 (i virkeligheten finnes det 10 bygninger, men datasettet dekker kun 8)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_kvalitetsmål_andel_manglende_enheter"><a class="anchor" href="#_kvalitetsmål_andel_manglende_enheter"></a>Kvalitetsmål «andel manglende enheter»</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>andel manglende enheter</strong> (bokmål), <strong>rate of missing objects</strong> (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">antall enheter som mangler i forhold til antall enheter som skulle være med i datasettet</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">basert på ISO 19157</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">number of missing objects in relation to the number of objects that should be present in the dataset</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">based on ISO 19157</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Datatype</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">prosent</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.02% (datasettet dekker 0.02% færre bygninger en det som eksisterer i virkeligheten)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_kvalitetsmål_antall_enheter_med_manglende_verdi_for_en_gitt_egenskap"><a class="anchor" href="#_kvalitetsmål_antall_enheter_med_manglende_verdi_for_en_gitt_egenskap"></a>Kvalitetsmål «antall enheter med manglende verdi for en gitt egenskap»</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>antall enheter med manglende verdi for en gitt egenskap</strong> (bokmål), <strong>number of objects with missing value for a given property</strong> (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">antall enheter i datasettet som mangler verdi for en gitt egenskap</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">egendefinert</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">number of objects in the data set with missing value for a given property</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">own defintion</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Datatype</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">heltall</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 (to bygninger mangler verdi for «bruksareal»)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_kvalitetsmål_andel_enheter_med_manglende_verdi_for_en_gitt_egenskap"><a class="anchor" href="#_kvalitetsmål_andel_enheter_med_manglende_verdi_for_en_gitt_egenskap"></a>Kvalitetsmål «andel enheter med manglende verdi for en gitt egenskap»</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>andel enheter med manglende verdi for en gitt egenskap</strong> (bokmål), <strong>rate of objects with missing value for av given property</strong> (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">antall enheter med manglende verdi for en gitt egenskap i forhold til antall enheter i datasettet</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">egendefinert</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">number of objects with missing value for a given property in relation to the number of objects in the dataset</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">own definition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Datatype</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">prosent</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.02% (0.02% av verdiene for egenskapen «bruksareal» mangler i datasettet)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_kvalitetsdeldimensjon_overdekning"><a class="anchor" href="#_kvalitetsdeldimensjon_overdekning"></a>Kvalitetsdeldimensjon «overdekning»</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>overdekning</strong> (bokmål), <strong>over-coverage</strong> (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Tillatt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">commission (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">data som er med men som ikke skulle være med i et datasett</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ISO 19157</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">excess data present in a data set</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ISO 19157</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect4">
+<h5 id="_kvalitetsmål_overflødige_enheter"><a class="anchor" href="#_kvalitetsmål_overflødige_enheter"></a>Kvalitetsmål «overflødige enheter»</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>overflødige enheter</strong> (bokmål), <strong>excess objects</strong> (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Tillatt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">overflødige objekter (bokmål)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">hvorvidt det finnes overflødige enheter i datasettet</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">basert på ISO 19157</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">whether there are objects incorrectly present in the dataset</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">based on ISO 19157</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Datatype</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolsk</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ja (noen bygninger er overflødige)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_kvalitetsmål_antall_overflødige_enheter"><a class="anchor" href="#_kvalitetsmål_antall_overflødige_enheter"></a>Kvalitetsmål «antall overflødige enheter»</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>antall overflødige enheter</strong> (bokmål), <strong>number of excess objects</strong> (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Tillatt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">antall overflødige objekter (bokmål)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">antall enheter som er i datasettet, men som ikke forventes å være med</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">basert på ISO 19175</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">number of objects within the data set or sample that should not have been present</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">based on ISO 19175</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Datatype</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">heltall</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3 (i virkeligheten finnes det 15 bygninger, men datasettet dekker 18)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_kvalitetsmål_andel_overflødige_enheter"><a class="anchor" href="#_kvalitetsmål_andel_overflødige_enheter"></a>Kvalitetsmål «andel overflødige enheter»</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>andel overflødige enheter</strong> (bokmål), <strong>rate of excess objects</strong> (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Tillatt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">andel overflødige objekter (bokmål)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">antall overflødige enheter i forhold til antall enheter som skulle være med i datasettet</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">basert på ISO 19157</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">number of excess objects in the data set in relation to the number of objects that should have been present</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">based on ISO 19157</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Datatype</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">prosent</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0,03% (0,03% av bygningene i datasettet burde ikke være representert)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_kvalitetsdeldimensjon_imputering"><a class="anchor" href="#_kvalitetsdeldimensjon_imputering"></a>Kvalitetsdeldimensjon «imputering»</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>imputering</strong> (bokmål), <strong>imputation</strong> (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">å sette inn verdi for en egenskap hvis den mangler eller er ubrukbar</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">basert på <a href="https://stats.oecd.org/glossary/detail.asp?ID=3462">«Glossary of Terms on Statistical Data Editing», OECD</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">entering a value for a specific data item where the value is missing or unusable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">based on <a href="https://stats.oecd.org/glossary/detail.asp?ID=3462">"Glossary of Terms on Statistical Data Editing", OECD</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect4">
+<h5 id="_kvalitetsmål_antall_enheter_med_imputert_verdi_for_en_gitt_egenskap"><a class="anchor" href="#_kvalitetsmål_antall_enheter_med_imputert_verdi_for_en_gitt_egenskap"></a>Kvalitetsmål «antall enheter med imputert verdi for en gitt egenskap»</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>antall enheter med imputert verdi for en gitt egenskap</strong> (bokmål), <strong>number of objects with imputed value for a given property</strong> (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Tillatt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">antall objekter med imputert verdi for en gitt egenskap (bokmål)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">antall enheter i datasettet med imputert verdi for en gitt egenskap</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">egendefinert</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">number of objects in the data set with imputed value for a given property</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">own definition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Datatype</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">heltall</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4 (fire bygninger har fått antatt verdi for «byggeår»)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_kvalitetsmål_andel_enheter_med_imputert_verdi_for_en_gitt_egenskap"><a class="anchor" href="#_kvalitetsmål_andel_enheter_med_imputert_verdi_for_en_gitt_egenskap"></a>Kvalitetsmål «andel enheter med imputert verdi for en gitt egenskap»</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>andel enheter med imputert verdi for en gitt egenskap</strong> (bokmål), <strong>rate of objects with imputed value for a given property</strong> (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Tillatt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">andel objekter med imputert verdi for en gitt egenskap (bokmål)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">antall enheter med imputert verdi for en gitt egenskap i forhold til antall enheter i datasettet</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">egendefinert</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">number of objects with imputed value for a given property in relation to the number of objects in the dataset</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">own definition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Datatype</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">prosent</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.04% (0.04% av bygningene har fått antatt verdi for «byggeår»)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_kvalitetsdimensjon_aktualitet"><a class="anchor" href="#_kvalitetsdimensjon_aktualitet"></a>Kvalitetsdimensjon «aktualitet»</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>aktualitet</strong> (bokmål), <strong>currentness</strong> (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Tillatt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">timeliness (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">graden av «ferskhet» av datasettet, for en spesifikk brukskontekst</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">basert på ISO 25012</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">the degree to which data has attributes that are of the right age in a specific context of use</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ISO 25012</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_kvalitetsdeldimensjon_tidsdifferanse"><a class="anchor" href="#_kvalitetsdeldimensjon_tidsdifferanse"></a>Kvalitetsdeldimensjon «tidsdifferanse»</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>tidsdifferanse</strong> (bokmål), <strong>delay</strong> (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ferskhet av data uttrykt som differansen mellom to tidspunkter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">egendefinert</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">age of the dataset described as the difference between two points in time</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">own definition</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect4">
+<h5 id="_kvalitetsmål_samlet_tidsdifferanse"><a class="anchor" href="#_kvalitetsmål_samlet_tidsdifferanse"></a>Kvalitetsmål «samlet tidsdifferanse»</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>samlet tidsdifferanse</strong> (bokmål), <strong>overall time difference</strong> (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tid mellom når datasettet kan tas i bruk og den hendelsen eller fenomenet datasettet beskriver inntreffer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Eurostats begrepsdatabase RAMON, European Union, Regulation (EC) No 223/2009</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">length of time between data availability and the event or phenomenon they describe</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Eurostat RAMON, European Union, Regulation (EC) No 223/2009</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Datatype</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">duration</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tillatte måleenheter for duration som er hentet fra xsd, er sekunder, minutter, dager, måneder eller år, dvs. ikke uker.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">‘’24 dager’’ (det tar i gjennomsnitt 24 dager fra en bygning står ferdig eller er revet til den er innlemmet i eller tatt ut fra datasettet)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_kvalitetsdimensjon_konsistens"><a class="anchor" href="#_kvalitetsdimensjon_konsistens"></a>Kvalitetsdimensjon «konsistens»</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>konsistens</strong> (bokmål), <strong>consistency</strong> (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">graden av at dataene har egenskaper som ikke er motsigende og som samsvarer med andre egenskaper, for en spesifikk brukskontekst</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ISO 25012</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Konsistens kan gjelde én eller flere sammenlignbare enheter i datasettet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">the degree to which data has attributes that are free from contradiction and are coherent with other data in a specific context of use</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ISO 25012</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Merknad (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">It can be either or both among data regarding one entity and across similar data for comparable entities.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_kvalitetsdeldimensjon_konsistens_innad_i_datasett"><a class="anchor" href="#_kvalitetsdeldimensjon_konsistens_innad_i_datasett"></a>Kvalitetsdeldimensjon «konsistens innad i datasett»</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>konsistens innad i datasett</strong> (bokmål), <strong>consistency within the dataset</strong> (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">graden av konsistens mellom egenskapene i datasettet</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">egendefinert</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">the degree to which there is consistency between the properties in the dataset</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">own definition</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect4">
+<h5 id="_kvalitetsmål_andel_enheter_med_inkonsistente_egenskaper"><a class="anchor" href="#_kvalitetsmål_andel_enheter_med_inkonsistente_egenskaper"></a>Kvalitetsmål «andel enheter med inkonsistente egenskaper»</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>andel enheter med inkonsistente egenskaper</strong> (bokmål), <strong>rate of objects with inconsistent properties</strong> (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Tillatt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">andel objekter med inkonsistente egenskaper (bokmål)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">antall enheter med inkonsistente egenskaper i forhold til antall enheter i datasettet</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">egendefinert</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">number of objects with inconsistent properties in relation to the number of objects in the data set</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">own definition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Datatype</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">prosent</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.03% (av bygningene har inkonsistens innbyrdes mellom noen av egenskapene)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_kvalitetsmål_andel_enheter_med_inkonsistens_mellom_gitte_egenskaper"><a class="anchor" href="#_kvalitetsmål_andel_enheter_med_inkonsistens_mellom_gitte_egenskaper"></a>Kvalitetsmål «andel enheter med inkonsistens mellom gitte egenskaper»</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>andel enheter med inkonsistens mellom gitte egenskaper</strong> (bokmål), <strong>rate of objects with inconsistency between given properties</strong> (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Tillatt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">andel objekter med inkonsistens mellom gitte egenskaper (bokmål)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">antall enheter med inkonsistens mellom gitte egenskaper i forhold til antall enheter i datasettet</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">egendefinert</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">number of objects with inconsistency between given properties in relation to the number of objects in the data set</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">own definition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Datatype</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">prosent</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>0,03% (av bygningene i datasettet står oppført med bruksareal som er høyere enn bruttoareal)</p>
+</li>
+<li>
+<p>0,4% (av ansatte i datasettet står oppført med startdato på arbeidsforhold som er før fødsesldato)</p>
+</li>
+<li>
+<p>0,2% (av personene i datasettet står oppført som utvandret, men er likevel registrert med norsk bostedsadresse)</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_kvalitetsdimensjon_nøyaktighet"><a class="anchor" href="#_kvalitetsdimensjon_nøyaktighet"></a>Kvalitetsdimensjon «nøyaktighet»</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>nøyaktighet</strong> (bokmål), <strong>accuracy</strong> (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">graden av at dataene korrekt representerer virkeligheten, for en spesifikk brukskontekst</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">basert på ISO 25012</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">the degree to which data has attributes that correctly represent the true value of the intended attribute of a concept or event in a specific context of use</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ISO 25012</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_kvalitetsdeldimensjon_identifikatorriktighet"><a class="anchor" href="#_kvalitetsdeldimensjon_identifikatorriktighet"></a>Kvalitetsdeldimensjon «identifikatorriktighet»</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>identifikatorriktighet</strong> (bokmål), <strong>identifier correctness</strong> (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">graden av at enhetene i datasettet har riktige identifikatorer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">basert på BLUE-ETS</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">the degree to which the objects in the dataset have the correct identifiers</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">based on BLUE-ETS</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect4">
+<h5 id="_kvalitetsmål_antall_enheter_med_identifikatorfeil"><a class="anchor" href="#_kvalitetsmål_antall_enheter_med_identifikatorfeil"></a>Kvalitetsmål «antall enheter med identifikatorfeil»</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>antall enheter med identifikatorfeil</strong> (bokmål), <strong>number of objects with incorrect identifiers</strong> (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Tillatt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">antall objekter med identifikatorfeil (bokmål)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">antall enheter i datasettet med feil identifikatorer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">egendefinert</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">number of objects in the data set with incorrect identifiers</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">own definition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Datatype</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">heltall</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">207 (207 personer uten f-nummer/d-nummer men en utenlandsk id som ikke kvalitetssikres)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_kvalitetsmål_andel_enheter_med_identifikatorfeil"><a class="anchor" href="#_kvalitetsmål_andel_enheter_med_identifikatorfeil"></a>Kvalitetsmål «andel enheter med identifikatorfeil»</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>andel enheter med identifikatorfeil</strong> (bokmål), <strong>rate of objects with incorrect identifiers</strong> (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Tillatt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">andel objekter med identifikatorfeil (bokmål)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">antall enheter med feil identifikatorer i forhold til antall enheter i datasettet</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">egendefinert</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">number of objects with incorrect identifiers in relation to the number of objects in the data set</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">own definition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Datatype</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">prosent</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0,01% (0,01% av personene i datasettet har gått fra midlertidig tilknytning til permanent oppholdstillatelse og står oppført med d-nummer som identifikator istedenfor f-nummer)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_kvalitetsdeldimensjon_klassifikasjonsriktighet"><a class="anchor" href="#_kvalitetsdeldimensjon_klassifikasjonsriktighet"></a>Kvalitetsdeldimensjon «klassifikasjonsriktighet»</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>klassifikasjonsriktighet</strong> (bokmål), <strong>classification correctness</strong> (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">riktigheten til klassifiseringen av enheter eller deres egenskaper sammenlignet med sanne verdier</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">basert på <a href="https://www.kartverket.no/globalassets/standard/bransjestandarder-utover-sosi/geodatakvalitet.pdf">Geodatakvalitet</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">comparison of the classes assigned to features or their attributes to a universe of discourse (e.g. ground truth or reference data)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ISO 19157</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect4">
+<h5 id="_kvalitetsmål_antall_feilklassifiserte_enheter_for_en_gitt_egenskap"><a class="anchor" href="#_kvalitetsmål_antall_feilklassifiserte_enheter_for_en_gitt_egenskap"></a>Kvalitetsmål «antall feilklassifiserte enheter for en gitt egenskap»</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>antall feilklassifiserte enheter for en gitt egenskap</strong> (bokmål), <strong>number of incorrectly classified objects for a given property</strong> (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Tillatt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">antall feilklassifiserte objekter for en gitt egenskap (bokmål)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">antall enheter i datasettet med feil klassifisering for en gitt egenskap</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">basert på ISO 19157</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">number of objects in the dataset that are incorrectly classified for a given property</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">based on ISO 19157</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Datatype</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">heltall</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">97 (97 enheter er oppført med feil næringskode i datasettet)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_kvalitetsmål_andel_feilklassifiserte_enheter_for_en_gitt_egenskap"><a class="anchor" href="#_kvalitetsmål_andel_feilklassifiserte_enheter_for_en_gitt_egenskap"></a>Kvalitetsmål «andel feilklassifiserte enheter for en gitt egenskap»</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>andel feilklassifiserte enheter for en gitt egenskap</strong> (bokmål), <strong>rate of incorrectly classified objects for a given property</strong> (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Tillatt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">andel feilklassifiserte objekter for en gitt egenskap (bokmål), misclassification rate (engelsk)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">antall feilklassifiserte enheter for en gitt egenskap i forhold til antall enheter i datasettet</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (bokmål)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">basert på ISO 19157</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">number of objects that are incorrectly classified for a given property in relation to the number of objects in the dataset</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kilde til definisjon (engelsk)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">based on ISO 19157</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Datatype</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">prosent</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0,4% (0,4% av enhetene har feil kommunenummer)</p></td>
+</tr>
+</tbody>
+</table>
 <!-- Google Analytics -->
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -521,9 +2290,12 @@ ga('send', 'pageview');
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2020-06-09 12:40:14 UTC
+Sist oppdatert 2020-06-11 13:13:52 UTC
 </div>
 </div>
 </body>
