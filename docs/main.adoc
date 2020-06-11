@@ -1,4 +1,4 @@
-include::../shared/translation.adoc[]
+include::locale/attributes.adoc[]
 
 = Veileder for beskrivelse av kvalitet på datasett – kvantifiserbar kvalitet
 :description: Veileder for beskrivelse av kvalitet på datasett – kvantifiserbar kvalitet
@@ -10,25 +10,32 @@ include::../shared/translation.adoc[]
 :sectanchors:
 :title-logo-image:  image:images/digitaliseringsdirektoratet.png[pdfwidth=30vw]
 
+image::images/digitaliseringsdirektoratet.png[width=50%, pdfwidth=30vw]
+
 //:sectnums:
 
 //:sectnumlevels: 5
 
 //{description}
 
-include::../shared/download.adoc[]
+*Publisert*: 2020-02-20
+
+
+include::shared/download.adoc[]
 
 // :leveloffset: +1
 
 // Innhold her.
 
-Publisert: 2020-02-20
-
 include::innledning.adoc[]
+
 include::hensyn.adoc[]
+
 include::oversikt.adoc[]
+
 include::dimensjoner.adoc[]
+
 include::vedlegg.adoc[]
 
 
-include::../shared/stats.adoc[]
+include::shared/stats.adoc[]
