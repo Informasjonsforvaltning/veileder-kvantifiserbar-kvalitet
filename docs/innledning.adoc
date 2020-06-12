@@ -4,7 +4,7 @@
 
 Formålet med dette dokumentet er å gi veiledning i felles definisjoner på og måleverktøy for kvantifiserbar kvalitet på datasett. Et felles sett med definisjoner og måleverktøy vil skape en unison beskrivelse og forståelse av datakvalitet på tvers av virksomheter. Hensikten er ikke å utelukke andre måter å beskrive datakvalitet på enn disse presentert i dette dokumentet. Man står fritt til å supplere med andre typer kvalitetsmål i kvalitetsbeskrivelsen.
 
-I henhold til https://doc.difi.no/data/kvalitet-pa-datasett/[Spesifikasjon for beskrivelse av kvalitet på datasett]. er det flere ulike måter å beskrive kvalitet på et datasett på:
+I henhold til https://data.norge.no/specification/spesifikasjon-for-beskrivelse-av-kvalitet-pa-datasett/[Spesifikasjon for beskrivelse av kvalitet på datasett]. er det flere ulike måter å beskrive kvalitet på et datasett på:
 
 * kvantifiserbar kvalitet
 * ikke-kvantifiserbar kvalitet
@@ -25,17 +25,17 @@ Målgruppen for veilederen er:
 
 === Sammenheng mellom relevante standarder, spesifikasjoner og denne veilederen
 
-Veilederen må ses i sammenheng med  https://doc.difi.no/data/kvalitet-pa-datasett/[Spesifikasjon for beskrivelse av kvalitet på datasett].
+Veilederen må ses i sammenheng med  https://data.norge.no/specification/spesifikasjon-for-beskrivelse-av-kvalitet-pa-datasett/[Spesifikasjon for beskrivelse av kvalitet på datasett].
 
 image::images/sammenheng.png[]
 
 Tegningen ovenfor illustrerer sammenhengen mellom ulike standarder og spesifikasjoner:
 
-* https://doc.difi.no/dcat-ap-no/[DCAT-AP-NO], standard for beskrivelse av datakataloger og datasett: Denne spesifiserer bl.a. hvordan datasett beskrives i en datakatalog, deriblant hvordan en beskrivelse av kvantifiserbar kvalitet knyttes til beskrivelsen av et datasett.
+* https://data.norge.no/specification/dcat-ap-no/, standard for beskrivelse av datakataloger og datasett: Denne spesifiserer bl.a. hvordan datasett beskrives i en datakatalog, deriblant hvordan en beskrivelse av kvantifiserbar kvalitet knyttes til beskrivelsen av et datasett.
 
 NOTE: DCAT-AP-NO er i skrivende stund under revisjon, bl.a. for å kunne ta hensyn til beskrivelse av kvalitet.
 
-* https://doc.difi.no/data/kvalitet-pa-datasett/[Spesifikasjon for beskrivelse av kvalitet på datasett] (basert på DQV): Denne spesifiserer hvordan kvalitet på datasett beskrives, bl.a. å knytte kvalitetsbeskrivelse til kvalitetsdimensjon.
+* https://data.norge.no/specification/spesifikasjon-for-beskrivelse-av-kvalitet-pa-datasett/[Spesifikasjon for beskrivelse av kvalitet på datasett] (basert på DQV): Denne spesifiserer hvordan kvalitet på datasett beskrives, bl.a. å knytte kvalitetsbeskrivelse til kvalitetsdimensjon.
 
 NOTE: Spesifikasjonen vil bli justert etter revisjon av DCAT-AP-NO.
 
