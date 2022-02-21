@@ -6,6 +6,7 @@ include::locale/attributes.adoc[]
 :docinfo:
 :icons: font
 :toc: left
+ifdef::backend-pdf[:toc: macro]
 :toclevels: 5
 :sectanchors:
 :title-logo-image:  image:images/digitaliseringsdirektoratet.png[pdfwidth=30vw]
@@ -25,6 +26,8 @@ include::shared/download.adoc[]
 
 NOTE: *Innmelding av feil og mangler:* +
 Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn på https://github.com/Informasjonsforvaltning/veileder-kvantifiserbar-kvalitet/issues[Github Issues]. Dersom du ikke allerede har bruker på Github kan du opprette bruker gratis.
+
+toc::[]
 
 // :leveloffset: +1
 
