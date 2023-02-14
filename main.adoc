@@ -21,7 +21,9 @@ image::images/Digdir.png[width=50%, pdfwidth=30vw, link=https://digdir.no/]
 //{description}
 
 *Publisert*: 2020-02-20 + 
-*Oppdatert*: 2023-02-14 (definisjonene er tatt ut fra veilederen og lenket til der de finnes) 
+*Oppdatert*: 2023-02-14 (definisjonene er tatt ut fra veilederen og lenket til der de finnes) +
+*Gjeldende versjon*: https://data.norge.no/guide/veileder-kvantifiserbar-kvalitet + 
+*Redaktørens utkast*: https://informasjonsforvaltning.github.io/veileder-kvantifiserbar-kvalitet/ 
 
 
 include::shared/download.adoc[]
