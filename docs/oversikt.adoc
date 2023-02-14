@@ -2,27 +2,27 @@
 
 Denne veilederen forklarer bruk av predefinerte kvalitetsdimensjoner, kvalitetsdeldimensjoner og kvalitetsmål. Der det er hensiktsmessig kan man referere til andre definisjoner som ligger til grunn for kvalitetsmål.
 
-Tabellen gir en oversikt over de kvalitetsdimensjoner, kvalitetsdeldimensjoner og kvalitetsmål som så langt er predefinerte.
+Tabellen nedenfor gir en oversikt over de kvalitetsdimensjoner, kvalitetsdeldimensjoner og kvalitetsmål som så langt er predefinerte. De er også lenket til der definisjonene finnes. 
 
 .Oversikt over vokabularet for kvalitetsdimensjoner, kvalitetsdeldimensjoner og kvantifiserbare kvalitetsmål.
 [cols="25%,25%,50%"]
 |===
 |*Kvalitetsdimensjon*|*Kvalitetsdeldimensjon*|*Kvalitetsmål*
-.10+|Fullstendighet .5+|Underdekning|Manglende enheter
-|Antall manglende enheter
-|Andel manglende enheter
-|Antall enheter med manglende verdi for en gitt egenskap
-|Andel enheter med manglende verdi for en gitt egenskap
-.3+|Overdekning|Overflødige enheter
-|Antall overflødige enheter
-|Andel overflødige enheter
-.2+|Imputering| Antall enheter med imputert verdi for en gitt egenskap
-|Andel enheter med med imputert verdi for en gitt egenskap
-|Aktualitet|Tidsdifferanse|Samlet tidsdifferanse
-.2+|Konsistent .2+|Konsistens innad i datasettet|Andel enheter med inkonsistente egenskaper
-|Andel enheter med inkonsistens mellom gitte egenskaper
-.4+|Nøyaktighet .2+|Identifikatorriktighet|Antall enheter med identifikatorfeil
-|Andel enheter med identifikatorfeil
-.2+|Klassifikasjonsriktighet|Antall feilklassifiserte enheter for en gitt egenskap
-|Andel feilklassifiserte enheter for en gitt egenskap
+.10+| https://data.norge.no/vocabulary/quality-dimension#completeness[fullstendighet] .5+| https://data.norge.no/vocabulary/quality-dimension#under-coverage[underdekning] | https://data.norge.no/vocabulary/quality-metric#qm-completeness-1001[manglende enheter]
+| https://data.norge.no/vocabulary/quality-metric#qm-completeness-1002[antall manglende enheter]
+| https://data.norge.no/vocabulary/quality-metric#qm-completeness-1003[andel manglende enheter]
+| https://data.norge.no/vocabulary/quality-metric#qm-completeness-1004[antall enheter med manglende verdi for en gitt egenskap]
+| https://data.norge.no/vocabulary/quality-metric#qm-completeness-1005[andel enheter med manglende verdi for en gitt egenskap]
+.3+| https://data.norge.no/vocabulary/quality-dimension#over-coverage[overdekning] | https://data.norge.no/vocabulary/quality-metric#qm-completeness-2001[overflødige enheter]
+| https://data.norge.no/vocabulary/quality-metric#qm-completeness-2002[antall overflødige enheter]
+| https://data.norge.no/vocabulary/quality-metric#qm-completeness-2003[andel overflødige enheter]
+.2+| https://data.norge.no/vocabulary/quality-dimension#imputation[imputering]| https://data.norge.no/vocabulary/quality-metric#qm-completeness-3001[antall enheter med imputert verdi for en gitt egenskap]
+| https://data.norge.no/vocabulary/quality-metric#qm-completeness-3002[andel enheter med med imputert verdi for en gitt egenskap]
+| https://data.norge.no/vocabulary/quality-dimension#currentness[aktualitet] | https://data.norge.no/vocabulary/quality-dimension#delay[tidsdifferanse] | https://data.norge.no/vocabulary/quality-metric#qm-currentness-1001[samlet tidsdifferanse]
+.2+| https://data.norge.no/vocabulary/quality-dimension#consistency[konsistens] .2+| https://data.norge.no/vocabulary/quality-dimension#consistency-within-dataset[konsistens innad i datasett] | https://data.norge.no/vocabulary/quality-metric#qm-consistency-1001[andel enheter med inkonsistente egenskaper]
+| https://data.norge.no/vocabulary/quality-metric#qm-consistency-1002[andel enheter med inkonsistens mellom gitte egenskaper]
+.4+| https://data.norge.no/vocabulary/quality-dimension#accuracy[nøyaktighet] .2+| https://data.norge.no/vocabulary/quality-dimension#identifier-correctness[identifikatorriktighet] | https://data.norge.no/vocabulary/quality-metric#qm-accuracy-1001[antall enheter med identifikatorfeil]
+| https://data.norge.no/vocabulary/quality-metric#qm-accuracy-1002[andel enheter med identifikatorfeil]
+.2+| https://data.norge.no/vocabulary/quality-dimension#classification-correctness[klassifikasjonsriktighet] | https://data.norge.no/vocabulary/quality-metric#qm-accuracy-2001[antall feilklassifiserte enheter for en gitt egenskap]
+| https://data.norge.no/vocabulary/quality-metric#qm-accuracy-2002[andel feilklassifiserte enheter for en gitt egenskap]
 |===

@@ -1,0 +1,19 @@
+== Navnerom som er brukt i veilederen [[navnerom]]
+
+[[Tabell-navnerom]]
+.Oversikt over navnerom som er brukt i denne veilederen.
+[cols="10,45,45"]
+|===
+|*Prefiks*|*Navnerom*|*Forklaring/navn*
+|dcat| `\http://www.w3.org/ns/dcat#` | https://www.w3.org/TR/vocab-dcat-2/[Data Catalog Vocabulary]
+|dqv| `\http://www.w3.org/ns/dqv#` | https://www.w3.org/TR/vocab-dqv/[Data Quality Vocabulary]
+|rdfs| `\http://www.w3.org/2000/01/rdf-schema#` | https://www.w3.org/TR/rdf-schema/[RDF Schema 1.1] |xsd| `\http://www.w3.org/2001/XMLSchema#` | https://www.w3.org/TR/xmlschema-2/[XML Schema Part 2: Datatypes Second Edition]
+|===
+
+Eksempel på prefiksene ovenfor uttrykt i RDF Turtle:
+-----
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> . 
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+-----
