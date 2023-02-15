@@ -1,6 +1,7 @@
 include::locale/attributes.adoc[]
 
 = Veileder for beskrivelse av kvalitet på datasett – kvantifiserbar kvalitet
+Digitaliseringsdirektoratet (Digdir) / The Norwegian Digitalisation Agency
 :description: Veileder for beskrivelse av kvalitet på datasett – kvantifiserbar kvalitet
 :doctype: book
 :docinfo:
@@ -9,9 +10,9 @@ include::locale/attributes.adoc[]
 ifdef::backend-pdf[:toc: macro]
 :toclevels: 5
 :sectanchors:
-:title-logo-image:  image:images/digitaliseringsdirektoratet.png[pdfwidth=30vw]
+:title-logo-image:  image:images/Digdir.png[pdfwidth=30vw]
 
-image::images/digitaliseringsdirektoratet.png[width=50%, pdfwidth=30vw]
+image::images/Digdir.png[width=50%, pdfwidth=30vw, link=https://digdir.no/]
 
 //:sectnums:
 
@@ -19,7 +20,10 @@ image::images/digitaliseringsdirektoratet.png[width=50%, pdfwidth=30vw]
 
 //{description}
 
-*Publisert*: 2020-02-20
+*Publisert*: 2020-02-20 + 
+*Oppdatert*: 2023-02-14 (definisjonene er tatt ut fra veilederen og lenket til der de finnes) +
+*Gjeldende versjon*: https://data.norge.no/guide/veileder-kvantifiserbar-kvalitet + 
+*Redaktørens utkast*: https://informasjonsforvaltning.github.io/veileder-kvantifiserbar-kvalitet/ 
 
 
 include::shared/download.adoc[]
@@ -41,7 +45,10 @@ include::oversikt.adoc[]
 
 include::dimensjoner.adoc[]
 
-include::vedlegg.adoc[]
+include::navnerom.adoc[]
+
+// vedlegg med definisjonene er nå ikke inkludert, dvs. tatt ut:
+// include::vedlegg.adoc[] 
 
 
 include::shared/stats.adoc[]
