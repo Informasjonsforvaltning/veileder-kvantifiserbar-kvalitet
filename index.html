@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.18">
+<meta name="generator" content="Asciidoctor 2.0.23">
 <meta name="description" content="Veileder for beskrivelse av kvalitet på datasett – kvantifiserbar kvalitet">
 <meta name="author" content="Digitaliseringsdirektoratet (Digdir) / The Norwegian Digitalisation Agency">
 <title>Veileder for beskrivelse av kvalitet på datasett – kvantifiserbar kvalitet</title>
@@ -142,7 +142,7 @@ p a>code:hover{color:rgba(0,0,0,.9)}
 #content::before{content:none}
 #header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
 #header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
-#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header>h1:only-child{border-bottom:1px solid #dddddf;padding-bottom:8px}
 #header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:flex;flex-flow:row wrap}
 #header .details span:first-child{margin-left:-.125em}
 #header .details span.email a{color:rgba(0,0,0,.85)}
@@ -164,6 +164,7 @@ p a>code:hover{color:rgba(0,0,0,.9)}
 #toctitle{color:#7a2518;font-size:1.2em}
 @media screen and (min-width:768px){#toctitle{font-size:1.375em}
 body.toc2{padding-left:15em;padding-right:0}
+body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
 #toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
 #toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
 #toc.toc2>ul{font-size:.9em;margin-bottom:0}
@@ -210,13 +211,10 @@ table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
 .admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
 .exampleblock>.content{border:1px solid #e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;border-radius:4px}
-.exampleblock>.content>:first-child{margin-top:0}
-.exampleblock>.content>:last-child{margin-bottom:0}
 .sidebarblock{border:1px solid #dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;border-radius:4px}
-.sidebarblock>:first-child{margin-top:0}
-.sidebarblock>:last-child{margin-bottom:0}
 .sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
-.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content>:first-child,.sidebarblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child,.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
 .literalblock pre,.listingblock>.content>pre{border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
 @media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
 @media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
@@ -332,7 +330,7 @@ a.image{text-decoration:none;display:inline-block}
 a.image object{pointer-events:none}
 sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
 sup.footnote a,sup.footnoteref a{text-decoration:none}
-sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+sup.footnote a:active,sup.footnoteref a:active,#footnotes .footnote a:first-of-type:active{text-decoration:underline}
 #footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
 #footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
 #footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
@@ -395,7 +393,7 @@ b.conum *{color:inherit!important}
 dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
 h1,h2,p,td.content,span.alt,summary{letter-spacing:-.01em}
 p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
-p,blockquote,dt,td.content,span.alt,summary{font-size:1.0625rem}
+p,blockquote,dt,td.content,td.hdlist1,span.alt,summary{font-size:1.0625rem}
 p{margin-bottom:1.25rem}
 .sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
 .exampleblock>.content{background:#fffef7;border-color:#e0e0dc;box-shadow:0 1px 4px #e0e0dc}
@@ -518,10 +516,10 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_innledning"><a class="anchor" href="#_innledning"></a>Innledning</h2>
+<h2 id="_innledning"><a class="link" href="#_innledning">Innledning</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_formål_omfang_og_avgrensninger"><a class="anchor" href="#_formål_omfang_og_avgrensninger"></a>Formål, omfang og avgrensninger</h3>
+<h3 id="_formål_omfang_og_avgrensninger"><a class="link" href="#_formål_omfang_og_avgrensninger">Formål, omfang og avgrensninger</a></h3>
 <div class="paragraph">
 <p>Formålet med dette dokumentet er å gi veiledning i felles definisjoner på og måleverktøy for kvantifiserbar kvalitet på datasett. Et felles sett med definisjoner og måleverktøy vil skape en unison beskrivelse og forståelse av datakvalitet på tvers av virksomheter. Hensikten er ikke å utelukke andre måter å beskrive datakvalitet på enn disse presentert i dette dokumentet. Man står fritt til å supplere med andre typer kvalitetsmål i kvalitetsbeskrivelsen.</p>
 </div>
@@ -552,7 +550,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_målgruppe"><a class="anchor" href="#_målgruppe"></a>Målgruppe</h3>
+<h3 id="_målgruppe"><a class="link" href="#_målgruppe">Målgruppe</a></h3>
 <div class="paragraph">
 <p>Målgruppen for veilederen er:</p>
 </div>
@@ -571,7 +569,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_sammenheng_mellom_relevante_standarder_spesifikasjoner_og_denne_veilederen"><a class="anchor" href="#_sammenheng_mellom_relevante_standarder_spesifikasjoner_og_denne_veilederen"></a>Sammenheng mellom relevante standarder, spesifikasjoner og denne veilederen</h3>
+<h3 id="_sammenheng_mellom_relevante_standarder_spesifikasjoner_og_denne_veilederen"><a class="link" href="#_sammenheng_mellom_relevante_standarder_spesifikasjoner_og_denne_veilederen">Sammenheng mellom relevante standarder, spesifikasjoner og denne veilederen</a></h3>
 <div class="paragraph">
 <p>Veilederen må ses i sammenheng med  <a href="https://data.norge.no/specification/dqv-ap-no">DQV-AP-NO (Norsk applikasjonsprofil av DQV)</a>.</p>
 </div>
@@ -603,10 +601,10 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_hensyn_man_bør_ta_når_man_beskriver_kvantifiserbar_kvalitet_på_datasett"><a class="anchor" href="#_hensyn_man_bør_ta_når_man_beskriver_kvantifiserbar_kvalitet_på_datasett"></a>Hensyn man bør ta når man beskriver kvantifiserbar kvalitet på datasett<a id="hensyn"></a></h2>
+<h2 id="_hensyn_man_bør_ta_når_man_beskriver_kvantifiserbar_kvalitet_på_datasett"><a class="link" href="#_hensyn_man_bør_ta_når_man_beskriver_kvantifiserbar_kvalitet_på_datasett">Hensyn man bør ta når man beskriver kvantifiserbar kvalitet på datasett<a id="hensyn"></a></a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_kvalitet_kan_måles_på_ulike_nivåer"><a class="anchor" href="#_kvalitet_kan_måles_på_ulike_nivåer"></a>Kvalitet kan måles på ulike nivåer</h3>
+<h3 id="_kvalitet_kan_måles_på_ulike_nivåer"><a class="link" href="#_kvalitet_kan_måles_på_ulike_nivåer">Kvalitet kan måles på ulike nivåer</a></h3>
 <div class="paragraph">
 <p>Datakvalitet kan måles på både enhetsnivå og egenskapsnivå. I eksempeldatasettet under vil hver bygning være en enhet (eksemplifisert med rød ramme), mens opplysningene som er knyttet til hver bygning er egenskaper (eksemplifisert med blå ramme for egenskapen «bruksareal»; «eier», «byggeår», «kommune» og «bruttoareal» er også egenskaper).</p>
 </div>
@@ -621,7 +619,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_predefinerte_kvalitetsmål_bruker_negativt_ladede_ord"><a class="anchor" href="#_predefinerte_kvalitetsmål_bruker_negativt_ladede_ord"></a>Predefinerte kvalitetsmål bruker negativt ladede ord</h3>
+<h3 id="_predefinerte_kvalitetsmål_bruker_negativt_ladede_ord"><a class="link" href="#_predefinerte_kvalitetsmål_bruker_negativt_ladede_ord">Predefinerte kvalitetsmål bruker negativt ladede ord</a></h3>
 <div class="paragraph">
 <p>I predefineringen av kvalitetsmål er det valgt å bruke såkalte negativt ladede ord for flere av kvalitetsmålene. Negativt ladede ord tydeliggjør feil og mangler i datakvaliteten.</p>
 </div>
@@ -630,7 +628,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_fritekst_kan_brukes_som_supplerende_forklaring"><a class="anchor" href="#_fritekst_kan_brukes_som_supplerende_forklaring"></a>Fritekst kan brukes som supplerende forklaring</h3>
+<h3 id="_fritekst_kan_brukes_som_supplerende_forklaring"><a class="link" href="#_fritekst_kan_brukes_som_supplerende_forklaring">Fritekst kan brukes som supplerende forklaring</a></h3>
 <div class="paragraph">
 <p><a href="https://data.norge.no/specification/dqv-ap-no">DQV-AP-NO (Norsk applikasjonsprofil av DQV)</a> tillater bruk av fritekst-kommentarer som supplerende forklaringer til et kvantifiserbart kvalitetsmåleresultat. For eksempel, til vårt eksempeldatasett «Bygninger», hvis resultatet på kvalitetsmålet «andel enheter med manglende verdi for en gitt egenskap» er «2 %», kan man i fritekst-kommentaren spesifisere hvilken egenskap mangelen gjelder, for eksempel: «Dette gjelder egenskap ‘byggeår’».</p>
 </div>
@@ -667,7 +665,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </table>
 </div>
 <div class="sect2">
-<h3 id="_kvalitetsmål_som_erfaringsmessig_kan_være_viktige_for_brukerne_å_vite"><a class="anchor" href="#_kvalitetsmål_som_erfaringsmessig_kan_være_viktige_for_brukerne_å_vite"></a>Kvalitetsmål som erfaringsmessig kan være viktige for brukerne å vite</h3>
+<h3 id="_kvalitetsmål_som_erfaringsmessig_kan_være_viktige_for_brukerne_å_vite"><a class="link" href="#_kvalitetsmål_som_erfaringsmessig_kan_være_viktige_for_brukerne_å_vite">Kvalitetsmål som erfaringsmessig kan være viktige for brukerne å vite</a></h3>
 <div class="paragraph">
 <p>Ikke alle de predefinerte kvalitetsmålene er relevant å måle i enhver sammenheng. Man står fritt til å velge ut de kvalitetsmålene som er aktuelle for datasettet. I noen tilfeller er det «nøyaktighet» som er viktigst for brukerne av datasettet, i andre tilfeller kan det være «konsistens», eller begge. I mange tilfeller må man også ta høyde for at det er flere ulike typer brukere. Man bør derfor velge de kvalitetsmålene som erfaringsmessig er viktige for mange brukere av det aktuelle datasettet.</p>
 </div>
@@ -684,7 +682,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_oversikt_over_predefinerte_kvalitetsdimensjoner_kvalitetsdeldimensjoner_og_kvalitetsmål"><a class="anchor" href="#_oversikt_over_predefinerte_kvalitetsdimensjoner_kvalitetsdeldimensjoner_og_kvalitetsmål"></a>Oversikt over predefinerte kvalitetsdimensjoner, kvalitetsdeldimensjoner og kvalitetsmål<a id="oversikt"></a></h2>
+<h2 id="_oversikt_over_predefinerte_kvalitetsdimensjoner_kvalitetsdeldimensjoner_og_kvalitetsmål"><a class="link" href="#_oversikt_over_predefinerte_kvalitetsdimensjoner_kvalitetsdeldimensjoner_og_kvalitetsmål">Oversikt over predefinerte kvalitetsdimensjoner, kvalitetsdeldimensjoner og kvalitetsmål<a id="oversikt"></a></a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Denne veilederen forklarer bruk av predefinerte kvalitetsdimensjoner, kvalitetsdeldimensjoner og kvalitetsmål. Der det er hensiktsmessig kan man referere til andre definisjoner som ligger til grunn for kvalitetsmål.</p>
@@ -770,7 +768,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tbody>
 </table>
 <div class="sect2">
-<h3 id="_kvalitetsdimensjonen_fullstendighet"><a class="anchor" href="#_kvalitetsdimensjonen_fullstendighet"></a>Kvalitetsdimensjonen «fullstendighet»<a id="fullstendighet"></a></h3>
+<h3 id="_kvalitetsdimensjonen_fullstendighet"><a class="link" href="#_kvalitetsdimensjonen_fullstendighet">Kvalitetsdimensjonen «fullstendighet»<a id="fullstendighet"></a></a></h3>
 <div class="paragraph">
 <p>Kvalitetsdimensjonen <a href="https://data.norge.no/vocabulary/quality-dimension#completeness">fullstendighet</a> handler både om mangel på elementer i datasettet (kvalitetsdeldimensjon <a href="https://data.norge.no/vocabulary/quality-dimension#under-coverage">underdekning</a>) og overflødige elementer i datasettet (kvalitetsdeldimensjon <a href="https://data.norge.no/vocabulary/quality-dimension#over-coverage">overdekning</a>). Disse har kvalitetsmål på både enhets- og egenskapsnivå. Videre kan fullstendighet måles ut fra tre ulike verdityper, boolsk (ja/nei) på enhetsnivå, antall og andel på både enhets- og egenskapsnivå. Fritekst-feltet kan brukes til å opplyse om hvilken gitt egenskap som det mangler verdier for (for eksempel «bruksareal»).</p>
 </div>
@@ -849,7 +847,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </table>
 </div>
 <div class="sect2">
-<h3 id="_kvalitetsdimensjonen_aktualitet"><a class="anchor" href="#_kvalitetsdimensjonen_aktualitet"></a>Kvalitetsdimensjonen «aktualitet»</h3>
+<h3 id="_kvalitetsdimensjonen_aktualitet"><a class="link" href="#_kvalitetsdimensjonen_aktualitet">Kvalitetsdimensjonen «aktualitet»</a></h3>
 <div class="paragraph">
 <p>Det er predefinert ett kvalitetsmål i kvalitetsdimensjonen <a href="https://data.norge.no/vocabulary/quality-dimension#currentness">aktualitet</a> – <a href="https://data.norge.no/vocabulary/quality-metric#qm-currentness-1001">samlet tidsdifferanse</a>.</p>
 </div>
@@ -883,7 +881,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </table>
 </div>
 <div class="sect2">
-<h3 id="_kvalitetsdimensjonen_konsistens"><a class="anchor" href="#_kvalitetsdimensjonen_konsistens"></a>Kvalitetsdimensjonen «konsistens»</h3>
+<h3 id="_kvalitetsdimensjonen_konsistens"><a class="link" href="#_kvalitetsdimensjonen_konsistens">Kvalitetsdimensjonen «konsistens»</a></h3>
 <div class="paragraph">
 <p>Kvalitetsdimensjonen <a href="https://data.norge.no/vocabulary/quality-dimension#consistency">konsistens</a> gjelder konsistens innad i ett og samme datasett, og ikke konsistens mellom datasett. Om datasettet er i samsvar med gitte standarder og krav er ikke definert på nytt som et eget kvalitetsmål ettersom dette er dekket av DCAT-AP-NO <a href="https://data.norge.no/specification/dcat-ap-no/#datasett-i-samsvar-med">(Datasett: i samsvar med)</a>. Et eksempel på slik innbyrdes inkonsistens er når bruksareal er større enn bruttoareal for en bygning.</p>
 </div>
@@ -923,7 +921,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </table>
 </div>
 <div class="sect2">
-<h3 id="_kvalitetsdimensjonen_nøyaktighet"><a class="anchor" href="#_kvalitetsdimensjonen_nøyaktighet"></a>Kvalitetsdimensjonen «nøyaktighet»</h3>
+<h3 id="_kvalitetsdimensjonen_nøyaktighet"><a class="link" href="#_kvalitetsdimensjonen_nøyaktighet">Kvalitetsdimensjonen «nøyaktighet»</a></h3>
 <div class="paragraph">
 <p>I kvalitetsdimensjonen <a href="https://data.norge.no/vocabulary/quality-dimension#accuracy">nøyaktighet</a> måles i hvilken grad dataene korrekt representerer virkeligheten.</p>
 </div>
@@ -962,7 +960,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect1">
-<h2 id="navnerom"><a class="anchor" href="#navnerom"></a>Navnerom som er brukt i veilederen</h2>
+<h2 id="navnerom"><a class="link" href="#navnerom">Navnerom som er brukt i veilederen</a></h2>
 <div class="sectionbody">
 <table id="Tabell-navnerom" class="tableblock frame-all grid-all stretch">
 <caption class="title">Tabell 2. Oversikt over navnerom som er brukt i denne veilederen.</caption>
@@ -1026,7 +1024,7 @@ ga('send', 'pageview');
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2023-02-14 13:59:02 UTC
+Sist oppdatert 2024-08-08 13:23:19 UTC
 </div>
 </div>
 </body>
