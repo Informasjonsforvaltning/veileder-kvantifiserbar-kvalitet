@@ -10,24 +10,24 @@ Eksemplet uttrykt i RDF Turtle i henhold til DQV-AP-NO blir (eksemplet er ikke k
 
 -----
 :dsBuildings a dcat:Dataset ; # et datasett
-   dqv:hasQualityMeasurement # har måleresultat
+   dqv:hasQualityMeasurement # har kvalitetsmåling
       :qmMissingObjects , # manglende enheter
       :qmNumberMissingObjects , # antall manglende enheter
       :qmRateMissingObjects . # andel manglende enheter
 
-:qmMissingObjects a dqv:QualityMeasurement ; # et måleresultat
+:qmMissingObjects a dqv:QualityMeasurement ; # en kvalitetsmåling
    dqv:isMeasurementOf <https://data.norge.no/vocabulary/quality-metric#qm-completeness-1001> ; # manglende enheter
    dqv:value "true"^^xsd:boolean ;
    rdfs:comment "Ja, noen bygninger mangler i datasettet."@nb ,
       "Yes, some buildings are missing in the dataset."@en .
 
-:qmNumberMissingObjects a dqv:QualityMeasurement ; # et måleresultat
+:qmNumberMissingObjects a dqv:QualityMeasurement ; # en kvalitetsmåling
    dqv:isMeasurementOf <https://data.norge.no/vocabulary/quality-metric#qm-completeness-1002> ; # antall manglende enheter
    dqv:value "2"^^xsd:nonNegativeInteger ;
    rdfs:comment "To bygninger mangler i datasettet."@nb ,
       "Two buildings are missing in the dataset."@en .
 
-:qmRateMissingObjects a dqv:QualityMeasurement ; # et måleresultat
+:qmRateMissingObjects a dqv:QualityMeasurement ; # en kvalitetsmåling
    dqv:isMeasurementOf <https://data.norge.no/vocabulary/quality-metric#qm-completeness-1003> ; # andel manglende enheter
    dqv:value "0.02"^^xsd:double ;
    rdfs:comment "0,02% av bygninger mangler i datasettet."@nb ,
@@ -45,10 +45,10 @@ Eksemplet uttrykt i RDF Turtle i henhold til DQV-AP-NO blir (eksemplet er ikke k
 
 -----
 :dsBuildings a dcat:Dataset ; # et datasett
-   dqv:hasQualityMeasurement # har måleresultat
+   dqv:hasQualityMeasurement # har kvalitetsmåling
       :qmNumberImputedValues . # antall impurterte verdier
    
-:qmNumberImputedValues a dqv:QualityMeasurement ; # et måleresultat
+:qmNumberImputedValues a dqv:QualityMeasurement ; # en kvalitetsmåling
    dqv:isMeasurementOf <https://data.norge.no/vocabulary/quality-metric#qm-completeness-3001> ; # andel enheter med imputert verdi for en gitt egenskap
    dqv:value "4"^^xsd:nonNegativeInteger ;
    rdfs:comment "Fire bygninger har fått imputert verdi for egenskapen 'byggeår'."@nb ,
@@ -68,10 +68,10 @@ Eksemplet uttrykt i RDF Turtle i henhold til DQV-AP-NO blir (eksemplet er ikke k
 
 -----
 :dsBuildings a dcat:Dataset ; # et datasett
-   dqv:hasQualityMeasurement # har måleresultat
+   dqv:hasQualityMeasurement # har kvalitetsmåling
       :qmOverallDelay . # samle tidsdifferanse
 
-:qmOverallDelay a dqv:QualityMeasurement ; # et måleresultat 
+:qmOverallDelay a dqv:QualityMeasurement ; # en kvalitetsmåling 
    dqv:isMeasurementOf <https://data.norge.no/vocabulary/quality-metric#qm-currentness-1001> ; # samlet tidsdifferanse
    dqv:value "P30D"^^xsd:duration ;
    rdfs:comment "Det tar i gjennomsnitt 24 dager fra en bygning står ferdig eller er revet til den er innlemmet i eller tatt ut fra datasettet. Medregnet intern saksbehandlingstid blir den samlede tidsdifferansen 30 dager."@nb ,
@@ -96,10 +96,10 @@ Eksemplet uttrykt i RDF Turtle i henhold til DQV-AP-NO blir (eksemplet er ikke k
 
 -----
 :dsBuildings a dcat:Dataset ; # et datasett
-   dqv:hasQualityMeasurement # har måleresultat
+   dqv:hasQualityMeasurement # har kvalitetsmåling
       :qmRateInconsistencyGivenProperties . # andel enheter med inkonsistens mellom gitte egenskaper
 
-:qmRateInconsistencyGivenProperties a dqv:QualityMeasurement ; # et måleresultat 
+:qmRateInconsistencyGivenProperties a dqv:QualityMeasurement ; # en kvalitetsmåling 
    dqv:isMeasurementOf <https://data.norge.no/vocabulary/quality-metric#qm-consistency-1002> ; # andel enheter med inkonsistens mellom gitte egenskaper
    dqv:value "0.03"^^xsd:double ;
    rdfs:comment "0,03% av bygningene i datasettet står oppført med 'bruksareal' som er høyere enn 'bruttoareal'."@nb ,
@@ -121,10 +121,10 @@ Eksemplet uttrykt i RDF Turtle i henhold til DQV-AP-NO blir (eksemplet er ikke k
 
 -----
 :dsBuildings a dcat:Dataset ; # et datasett
-   dqv:hasQualityMeasurement # har måleresultat
+   dqv:hasQualityMeasurement # har kvalitetsmåling
       :qmRateIncorrectIdentifier . # andel enheter med identifikatorfeil
 
-:qmRateIncorrectIdentifier a dqv:QualityMeasurement ; # et måleresultat 
+:qmRateIncorrectIdentifier a dqv:QualityMeasurement ; # en kvalitetsmåling 
    dqv:isMeasurementOf <https://data.norge.no/vocabulary/quality-metric#qm-accuracy-1002> ; # andel enheter med inkonsistens mellom gitte egenskaper
    dqv:value "0.01"^^xsd:double ;
    rdfs:comment "0,01% av bygningene i datasettet har fått feil identifikator."@nb ,
