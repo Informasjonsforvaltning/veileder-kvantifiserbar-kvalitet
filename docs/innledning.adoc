@@ -27,7 +27,8 @@ Målgruppen for veilederen er:
 
 Veilederen må ses i sammenheng med  https://data.norge.no/specification/dqv-ap-no[DQV-AP-NO (Norsk applikasjonsprofil av DQV) &#x29C9;, window="_blank", role="ext-link"].
 
-image::images/sammenheng.png[]
+.Sammenheng mellom DCAT-AP-NO, DQV-AP-NO og felles definisjoner av kvalitets(del)dimensjoner og kvalitetsmål. 
+image::images/sammenheng.png[alt="Tegning som viser sammenheng mellom DCAT-AP-NO (venstredelen av tegning), DQV-AP-NO (midtredelen tegningen) og Felles definisjoner (høyredelen av tegningen)."]
 
 Tegningen ovenfor illustrerer sammenhengen mellom ulike standarder/spesifikasjoner og felles definisjoner:
 

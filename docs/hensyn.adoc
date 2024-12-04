@@ -8,7 +8,7 @@ Der det er relevant, finnes det predefinere kvalitetsmål for både enhet- og eg
 
 
 .Eksempeldatasett: Bygninger
-image::images/eksempeldatasett.png[]
+image::images/eksempeldatasett.png[alt="Tabell med et illustrativt datasett, som inneholder fire rader og seks kolonner."]
 
 === Predefinerte kvalitetsmål bruker negativt ladede ord
 
