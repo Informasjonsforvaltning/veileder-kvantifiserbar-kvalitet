@@ -1,6 +1,6 @@
 === Kvalitetsdimensjonen «fullstendighet»[[fullstendighet]]
 
-Kvalitetsdimensjonen https://data.norge.no/vocabulary/quality-dimension#completeness[fullstendighet] handler både om mangel på elementer i datasettet (kvalitetsdeldimensjon https://data.norge.no/vocabulary/quality-dimension#under-coverage[underdekning]) og overflødige elementer i datasettet (kvalitetsdeldimensjon https://data.norge.no/vocabulary/quality-dimension#over-coverage[overdekning]). Disse har kvalitetsmål på både enhets- og egenskapsnivå. Videre kan fullstendighet måles ut fra tre ulike verdityper, boolsk (ja/nei) på enhetsnivå, antall og andel på både enhets- og egenskapsnivå. Fritekst-feltet kan brukes til å opplyse om hvilken gitt egenskap som det mangler verdier for (for eksempel «bruksareal»).
+Kvalitetsdimensjonen https://data.norge.no/vocabulary/quality-dimension#completeness[fullstendighet &#x29C9;, window="_blank", role="ext-link"] handler både om mangel på elementer i datasettet (kvalitetsdeldimensjon https://data.norge.no/vocabulary/quality-dimension#under-coverage[underdekning &#x29C9;, window="_blank", role="ext-link"]) og overflødige elementer i datasettet (kvalitetsdeldimensjon https://data.norge.no/vocabulary/quality-dimension#over-coverage[overdekning &#x29C9;, window="_blank", role="ext-link"]). Disse har kvalitetsmål på både enhets- og egenskapsnivå. Videre kan fullstendighet måles ut fra tre ulike verdityper, boolsk (ja/nei) på enhetsnivå, antall og andel på både enhets- og egenskapsnivå. Fritekst-feltet kan brukes til å opplyse om hvilken gitt egenskap som det mangler verdier for (for eksempel «bruksareal»).
 
 [cols=100%]
 |===
@@ -35,7 +35,7 @@ Eksemplet uttrykt i RDF Turtle i henhold til DQV-AP-NO blir (eksemplet er ikke k
 -----
 |===
 
-Fullstendighet handler også om https://data.norge.no/vocabulary/quality-dimension#imputation[imputering]. Imputering er å fylle inn verdi for en gitt egenskap der verdien mangler eller er ubrukbar. Dette gjøres for å håndtere manglende verdier for egenskaper (tomme celler) i et datasett der disse manglende verdiene skaper problemer for, blant annet, analysen av dataene. Imputerte verdier som kvalitetsmål gir datatilbyderen mulighet til å informere brukerne av datasettet at det er egenskaper i datasettet som ikke er hentet fra virkeligheten. 
+Fullstendighet handler også om https://data.norge.no/vocabulary/quality-dimension#imputation[imputering &#x29C9;, window="_blank", role="ext-link"]. Imputering er å fylle inn verdi for en gitt egenskap der verdien mangler eller er ubrukbar. Dette gjøres for å håndtere manglende verdier for egenskaper (tomme celler) i et datasett der disse manglende verdiene skaper problemer for, blant annet, analysen av dataene. Imputerte verdier som kvalitetsmål gir datatilbyderen mulighet til å informere brukerne av datasettet at det er egenskaper i datasettet som ikke er hentet fra virkeligheten. 
 
 [cols=100%]
 |===
@@ -58,7 +58,7 @@ Eksemplet uttrykt i RDF Turtle i henhold til DQV-AP-NO blir (eksemplet er ikke k
 
 === Kvalitetsdimensjonen «aktualitet»
 
-Det er predefinert ett kvalitetsmål i kvalitetsdimensjonen https://data.norge.no/vocabulary/quality-dimension#currentness[aktualitet] – https://data.norge.no/vocabulary/quality-metric#qm-currentness-1001[samlet tidsdifferanse].
+Det er predefinert ett kvalitetsmål i kvalitetsdimensjonen https://data.norge.no/vocabulary/quality-dimension#currentness[aktualitet &#x29C9;, window="_blank", role="ext-link"] – https://data.norge.no/vocabulary/quality-metric#qm-currentness-1001[samlet tidsdifferanse &#x29C9;, window="_blank", role="ext-link"].
 
 [cols=100%]
 |===
@@ -82,11 +82,11 @@ Eksemplet uttrykt i RDF Turtle i henhold til DQV-AP-NO blir (eksemplet er ikke k
 
 === Kvalitetsdimensjonen «konsistens»
 
-Kvalitetsdimensjonen https://data.norge.no/vocabulary/quality-dimension#consistency[konsistens] gjelder konsistens innad i ett og samme datasett, og ikke konsistens mellom datasett. Om datasettet er i samsvar med gitte standarder og krav er ikke definert på nytt som et eget kvalitetsmål ettersom dette er dekket av DCAT-AP-NO https://data.norge.no/specification/dcat-ap-no/#datasett-i-samsvar-med[(Datasett: i samsvar med)]. Et eksempel på slik innbyrdes inkonsistens er når bruksareal er større enn bruttoareal for en bygning.
+Kvalitetsdimensjonen https://data.norge.no/vocabulary/quality-dimension#consistency[konsistens &#x29C9;, window="_blank", role="ext-link"] gjelder konsistens innad i ett og samme datasett, og ikke konsistens mellom datasett. Om datasettet er i samsvar med gitte standarder og krav er ikke definert på nytt som et eget kvalitetsmål ettersom dette er dekket av DCAT-AP-NO https://data.norge.no/specification/dcat-ap-no/#datasett-i-samsvar-med[(Datasett: i samsvar med) &#x29C9;, window="_blank", role="ext-link"]. Et eksempel på slik innbyrdes inkonsistens er når bruksareal er større enn bruttoareal for en bygning.
 
 Kvalitetsdimensjonen konsistens kan i mange tilfeller lett forveksles med kvalitetsdimensjonen nøyaktighet. Det som bl.a. skiller nøyaktighet og konsistens er at når det gjelder konsistens _vet man ut fra vurdering av flere egenskaper at det er feil, men ikke hvilken eller hvilke egenskaper som er feil_ i datasettet. I eksemplet over er det ikke mulig å avgjøre om det er bruksareal eller bruttoareal (eller begge) som er feil. Når det gjelder nøyaktighet, _vet man hvilken egenskap som er feil_ (for eksempel feil identifikator).
 
-Det første kvalitetsmålet i konsistens (https://data.norge.no/vocabulary/quality-metric#qm-consistency-1001[andel enheter med inkonsistente egenskaper]) måles på enhetsnivå. Her måles andel enheter som har en form for inkonsistens knyttet til seg. Det andre kvalitetsmålet (https://data.norge.no/vocabulary/quality-metric#qm-consistency-1002[andel enheter med inkonsistens mellom gitte egenskaper]) går mer i dybden og brukes der man har innsikt i hva inkonsistensen gjelder på egenskapsnivå. Kvalitetsmålene oppgis i prosentandel; fritekstfeltet kan brukes til å forklare for hvilke egenskaper inkonsistensen gjelder.
+Det første kvalitetsmålet i konsistens (https://data.norge.no/vocabulary/quality-metric#qm-consistency-1001[andel enheter med inkonsistente egenskaper &#x29C9;, window="_blank", role="ext-link"]) måles på enhetsnivå. Her måles andel enheter som har en form for inkonsistens knyttet til seg. Det andre kvalitetsmålet (https://data.norge.no/vocabulary/quality-metric#qm-consistency-1002[andel enheter med inkonsistens mellom gitte egenskaper &#x29C9;, window="_blank", role="ext-link"]) går mer i dybden og brukes der man har innsikt i hva inkonsistensen gjelder på egenskapsnivå. Kvalitetsmålene oppgis i prosentandel; fritekstfeltet kan brukes til å forklare for hvilke egenskaper inkonsistensen gjelder.
 
 [cols=100%]
 |===
@@ -109,9 +109,9 @@ Eksemplet uttrykt i RDF Turtle i henhold til DQV-AP-NO blir (eksemplet er ikke k
 
 === Kvalitetsdimensjonen «nøyaktighet»
 
-I kvalitetsdimensjonen https://data.norge.no/vocabulary/quality-dimension#accuracy[nøyaktighet] måles i hvilken grad dataene korrekt representerer virkeligheten.
+I kvalitetsdimensjonen https://data.norge.no/vocabulary/quality-dimension#accuracy[nøyaktighet &#x29C9;, window="_blank", role="ext-link"] måles i hvilken grad dataene korrekt representerer virkeligheten.
 
-Nøyaktighet av en dataverdi er ofte avhengig av type data, og kvalitetsmål for nøyaktighet blir fort svært fag- og sektorspesifikke. De mest generelle nøyaktighetsmålene er derfor plukket ut i denne sammenheng: https://data.norge.no/vocabulary/quality-dimension#identifier-correctness[identifikatorriktighet] som går på identifikasjonsnøkler, og https://data.norge.no/vocabulary/quality-dimension#classification-correctness[klassifikasjonsriktighet] som går på bruk av klassifikasjoner og kodeverk.
+Nøyaktighet av en dataverdi er ofte avhengig av type data, og kvalitetsmål for nøyaktighet blir fort svært fag- og sektorspesifikke. De mest generelle nøyaktighetsmålene er derfor plukket ut i denne sammenheng: https://data.norge.no/vocabulary/quality-dimension#identifier-correctness[identifikatorriktighet &#x29C9;, window="_blank", role="ext-link"] som går på identifikasjonsnøkler, og https://data.norge.no/vocabulary/quality-dimension#classification-correctness[klassifikasjonsriktighet &#x29C9;, window="_blank", role="ext-link"] som går på bruk av klassifikasjoner og kodeverk.
 
 [cols=100%]
 |===
