@@ -4,7 +4,7 @@ include::locale/attributes.adoc[]
 Digitaliseringsdirektoratet (Digdir) / The Norwegian Digitalisation Agency
 :description: Veileder for beskrivelse av kvalitet på datasett – kvantifiserbar kvalitet
 :doctype: book
-:docinfo:
+:docinfo: shared
 :icons: font
 :toc: left
 ifdef::backend-pdf[:toc: macro]
@@ -21,7 +21,7 @@ image::images/Digdir.png[width=50%, pdfwidth=30vw, link=https://digdir.no/]
 //{description}
 
 *Publisert*: 2020-02-20 + 
-*Oppdatert*: 2023-02-14 (definisjonene er tatt ut fra veilederen og lenket til der de finnes) +
+*Oppdatert*: 2024-12-04 (kun redaksjonelle justeringer) +
 *Gjeldende versjon*: https://data.norge.no/guide/veileder-kvantifiserbar-kvalitet + 
 *Redaktørens utkast*: https://informasjonsforvaltning.github.io/veileder-kvantifiserbar-kvalitet/ 
 
