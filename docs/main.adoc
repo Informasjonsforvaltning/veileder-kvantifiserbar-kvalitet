@@ -51,4 +51,4 @@ include::navnerom.adoc[]
 // include::vedlegg.adoc[] 
 
 
-// include::shared/stats.adoc[]
+include::shared/analytics.adoc[]
