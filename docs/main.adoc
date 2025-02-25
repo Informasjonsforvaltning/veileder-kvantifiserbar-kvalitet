@@ -50,5 +50,5 @@ include::navnerom.adoc[]
 // vedlegg med definisjonene er nå ikke inkludert, dvs. tatt ut:
 // include::vedlegg.adoc[] 
 
-
+// Analytics
 include::shared/analytics.adoc[]
