@@ -1,5 +1,8 @@
 name: Build adocs and publish v1 to production
 
+permissions:
+  contents: read
+
 on:
   push:
     branches:
@@ -10,46 +13,20 @@ on:
 
 jobs:
   adoc_build:
-    runs-on: ubuntu-latest
     name: asciidoctor build
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          submodules: true
-          fetch-depth: 0
-          ref: v1
-
-      - name: Update submodules to latest main
-        run: |
-          git submodule foreach --recursive git fetch origin
-          git submodule foreach --recursive git checkout origin/main
-
-      - name: Build html
-        id: adocbuild_html
-        uses: tonynv/asciidoctor-action@master
-        with:
-          program: "asciidoctor -D docs -o index.html -a lang=nb docs/main.adoc"
-
-      - name: Build pdf
-        id: adocbuild_pdf
-        uses: tonynv/asciidoctor-action@master
-        with:
-          program: "asciidoctor-pdf -D docs -o files/veileder-kvantifiserbar-kvalitet.pdf -a lang=nb docs/main.adoc"
-        continue-on-error: true
-
-      - name: Upload files to static-rdf-server
-        uses: Informasjonsforvaltning/upload-files-to-static-rdf-server-action@v3.2.0
-        id: upload-files
-        with:
-          ontology-type: "guide"
-          ontology: "veileder-kvantifiserbar-kvalitet"
-          host: "https://data.norge.no"
-          api-key: ${{ secrets.STATIC_RDF_SERVER_API_KEY }}
-          files: |
-            docs/index.html text/html nb
-            docs/files/veileder-kvantifiserbar-kvalitet.pdf application/pdf nb files/veileder-kvantifiserbar-kvalitet.pdf
-            docs/images/Digdir.png image/png nb images/Digdir.png
-            docs/images/eksempeldatasett.png image/png nb images/eksempeldatasett.png
-            docs/images/sammenheng.png image/png nb images/sammenheng.png
+    uses: Informasjonsforvaltning/workflows/.github/workflows/specification-upload-files.yaml@main
+    with:
+      ref: v1
+      program_html: "asciidoctor -D docs -o index.html -a lang=nb docs/main.adoc"
+      program_pdf: "asciidoctor-pdf -D docs -o files/veileder-kvantifiserbar-kvalitet.pdf -a lang=nb docs/main.adoc"
+      files: |
+        docs/index.html text/html nb
+        docs/files/veileder-kvantifiserbar-kvalitet.pdf application/pdf nb files/veileder-kvantifiserbar-kvalitet.pdf
+        docs/images/Digdir.png image/png nb images/Digdir.png
+        docs/images/eksempeldatasett.png image/png nb images/eksempeldatasett.png
+        docs/images/sammenheng.png image/png nb images/sammenheng.png
+      ontology-type: "guide"
+      ontology: "veileder-kvantifiserbar-kvalitet"
+      host: "https://data.norge.no"
+    secrets:
+      STATIC_RDF_SERVER_API_KEY: ${{ secrets.STATIC_RDF_SERVER_API_KEY }}
